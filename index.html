@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=5">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 </head>
 <body>
 <div class="layout">
@@ -88,15 +88,11 @@
   <p class="meta skills">Kubernetes · Rook-Ceph · PostgreSQL · Go · FFmpeg · GitLab CI · ArgoCD · Prometheus · Grafana · Kepler · Cloudflare CDN · Gemini</p>
   <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="프로젝트 이미지">
     <div class="slides">
-      <figure class="slide"><a href="assets/img/ssukssuk_dashboard.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_dashboard.jpg" alt="FinOps 대시보드 (예상 화면)" loading="lazy"></a><figcaption>FinOps 대시보드 (예상 화면)</figcaption></figure>
-      <figure class="slide"><a href="assets/img/ssukssuk_album.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_album.jpg" alt="서비스 화면 · 앨범" loading="lazy"></a><figcaption>서비스 화면 · 앨범</figcaption></figure>
-      <figure class="slide"><a href="assets/img/ssukssuk_signup.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_signup.jpg" alt="서비스 화면 · 회원가입" loading="lazy"></a><figcaption>서비스 화면 · 회원가입</figcaption></figure>
       <figure class="slide"><a href="assets/img/ssukssuk_network.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_network.jpg" alt="네트워크 구성" loading="lazy"></a><figcaption>네트워크 구성</figcaption></figure>
       <figure class="slide"><a href="assets/img/ssukssuk_storage.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_storage.jpg" alt="미디어 처리·저장 파이프라인" loading="lazy"></a><figcaption>미디어 처리·저장 파이프라인</figcaption></figure>
       <figure class="slide"><a href="assets/img/ssukssuk_erd.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_erd.jpg" alt="풀스택 ERD" loading="lazy"></a><figcaption>풀스택 ERD</figcaption></figure>
       <figure class="slide"><a href="assets/img/ssukssuk_gitops.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_gitops.jpg" alt="GitLab CI/CD · GitOps" loading="lazy"></a><figcaption>GitLab CI/CD · GitOps</figcaption></figure>
       <figure class="slide"><a href="assets/img/ssukssuk_chatops.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_chatops.jpg" alt="AI ChatOps 장애 대응" loading="lazy"></a><figcaption>AI ChatOps 장애 대응</figcaption></figure>
-      <figure class="slide"><a href="assets/img/ssukssuk_metrics.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_metrics.jpg" alt="메트릭 관리 · FinOps 파이프라인" loading="lazy"></a><figcaption>메트릭 관리 · FinOps 파이프라인</figcaption></figure>
     </div>
     <button class="car-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
     <button class="car-btn next" type="button" aria-label="다음 이미지">&rsaquo;</button>
@@ -105,7 +101,7 @@
   <ul class="plain summary">
     <li>사용자 약 100만 명 규모의 성장앨범 서비스 '쑥쑥찰칵'을 벤치마킹해, 사진·영상 저장 비용 문제를 분석한 프로젝트입니다.</li>
     <li>AWS S3 대신 Kubernetes 위의 Rook-Ceph(Erasure Coding 2+1, 저장 효율 66.7%)로 S3 호환 스토리지를 직접 구축했습니다.</li>
-    <li>CI/CD·GitOps, AI ChatOps, FinOps 모니터링까지 구성해 저장 효율, 운영 안정성, 비용 효율성을 검증했습니다.</li>
+    <li>CI/CD·GitOps, AI ChatOps, 관측성 스택을 구성하고, 사진·영상 업로드 성능과 EC 저장 효율을 직접 측정했습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
@@ -213,26 +209,32 @@
 
 <section class="page" data-route="projects/ssukssuk/results" data-title="검증 결과">
   <h1>검증 결과</h1>
-  <p class="sub">부하·스케일링·장애 복구·FinOps 관측 검증</p>
+  <p class="sub">직접 측정한 값과 모델로 추정한 값을 구분해 정리했습니다.</p>
 
-  <h2>메트릭 관리 파이프라인</h2>
-  <figure>
-    <a href="assets/img/ssukssuk_metrics.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_metrics.jpg" alt="Locust 부하와 HPA, Bin Packing, 관측성 파이프라인, Alertmanager와 TCO 산출 4단계 구성" loading="lazy"></a>
-    <figcaption>부하 생성 &amp; HPA → Bin Packing → 관측성 수집 → 경보 &amp; TCO 산출</figcaption>
-  </figure>
-  <ul class="work">
-    <li><strong>업로드 · 조회 부하</strong> Locust 3,000 VUser, 100 TPS 목표 · 썸네일 조회 60% / 업로드 30%(1인 5개, 파일당 ≤50MB) / 동영상 Range Stream 10% <b>평균 Latency 180ms · 성공률 99.98%</b></li>
-    <li><strong>HPA 오토스케일링</strong> 트래픽 스파이크 감지 후 App Pod 2 → 5 → 최대 8개 확장 <b>반응 시간 28초</b></li>
-    <li><strong>Bin Packing</strong> MostRequestedPriority로 worker1에 앱을 밀집 배치(CPU 88.5%, Memory 85.2%), worker3는 Ceph OSD 전용으로 격리해 I/O 간섭 차단 <b>클러스터 유휴율 12% 이하</b></li>
-    <li><strong>OSD Failover</strong> worker1 OSD 강제 중지 시 PG <code>active+undersized+degraded</code> 상태에서도 읽기/쓰기 유지 <b>Downtime 0초 · 10~15초 내 Backfill</b></li>
-    <li><strong>전력 관측</strong> Kepler로 Pod/컨테이너 단위 Joule·Watt 수집, TCO 수식 파라미터 자동 추출</li>
-  </ul>
+  <h2>실측: 사진·영상 업로드 성능 (Ceph RGW, EC 2+1)</h2>
+  <div class="tablewrap"><table>
+    <tr><th></th><th>사진 데이터셋</th><th>동영상 데이터셋</th></tr>
+    <tr><th>데이터</th><td>장당 1.5~10MB, 100건</td><td>개당 45~50MB, 10건</td></tr>
+    <tr><th>동시성</th><td>5개 병렬</td><td>3개 병렬</td></tr>
+    <tr><th>I/O 성격</th><td>Random PUT</td><td>Sequential PUT</td></tr>
+    <tr><th>처리량</th><td class="num">평균 0.62 TPS</td><td class="num">평균 0.07 TPS</td></tr>
+    <tr><th>응답 시간</th><td class="num">평균 7,975.83 ms</td><td class="num">평균 39,724.84 ms</td></tr>
+    <tr><th>쓰기 대역폭</th><td class="num">약 3.56 MB/s</td><td class="num">약 3.36 MB/s</td></tr>
+    <tr><th>저장 효율</th><td class="num">66.7% (EC 2+1)</td><td class="num">66.7% (EC 2+1)</td></tr>
+  </table></div>
+  <p class="meta">테스트 조건: ClusterIP로 RGW에 직접 연결(Ingress/Proxy 오버헤드 제거), VMware 가상 OSD RAW Disk 3개. 목표였던 100 TPS에는 크게 못 미쳤고, 특정 OSD에 I/O가 몰리는 병목 가능성이 있어 추가 튜닝이 필요합니다.</p>
 
-  <h2>FinOps 대시보드 설계안</h2>
-  <figure>
-    <a href="assets/img/ssukssuk_dashboard.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_dashboard.jpg" alt="비용 절감액, EC 저장 비율, PUE 게이지, 트래픽 예측, Bin Packing 노드 맵, OSD 상태, CDN Latency 히트맵으로 구성된 Grafana 대시보드" loading="lazy"></a>
-    <figcaption>Executive Summary · ML 트래픽 예측 · 스토리지 건강 상태 3-Section 구성의 목표 대시보드 (예상 화면)</figcaption>
-  </figure>
+  <h2>추정: 앱 계층 선압축과 스케일별 용량</h2>
+  <p>10GB 샘플(사진 3,000장 + 동영상 500개)의 압축 결과를 단순선형회귀로 외삽한 값입니다. 종합 압축률 45%(잔존율 55%)를 가정했고, 물리 용량은 Ceph EC 2+1의 1.5배 규칙을 적용했습니다.</p>
+  <div class="tablewrap"><table>
+    <tr><th>스케일</th><th>원본</th><th>앱 계층 최종 저장</th><th>필요 물리 용량 (×1.5)</th></tr>
+    <tr><th>PoC 샘플</th><td>10 GB</td><td>5.5 GB</td><td>-</td></tr>
+    <tr><th>100 TB</th><td>100 TB</td><td>55 TB</td><td>82.5 TB</td></tr>
+    <tr><th>1 PB</th><td>1,000 TB</td><td>550 TB</td><td>825 TB</td></tr>
+    <tr><th>5 PB</th><td>5,000 TB</td><td>2,750 TB</td><td>4,125 TB</td></tr>
+    <tr><th>10 PB</th><td>10,000 TB</td><td>5,500 TB</td><td>8,250 TB</td></tr>
+  </table></div>
+  <p class="meta">추정값이며 실서비스 데이터로 검증하지 않았습니다.</p>
 </section>
 
 <section class="page" data-route="projects/dr-a2" data-title="멀티클라우드 기반 업종 특화 SaaS 플랫폼">
@@ -301,6 +303,6 @@
 
 </main>
 </div>
-<script src="assets/js/script.js?v=5" defer></script>
+<script src="assets/js/script.js?v=6" defer></script>
 </body>
 </html>
