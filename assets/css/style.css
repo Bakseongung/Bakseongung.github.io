@@ -138,3 +138,5 @@ ul.summary li { margin: 6px 0; }
 .proj-head { margin: 0 0 12px; }
 .skills-label { margin: 0 0 2px; font-weight: 700; }
 .skills { margin: 0 0 8px; }
+ul.ts span { display: block; }
+ul.ts em { font-style: normal; color: var(--muted); display: inline-block; min-width: 2.4rem; margin-right: 8px; }
