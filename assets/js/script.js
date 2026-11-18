@@ -156,10 +156,12 @@
     $('.next', car).addEventListener('click', () => go(cur + 1));
     document.addEventListener('keydown', e => {
       if (!pageOf['projects/ssukssuk'].classList.contains('active')) return;
+      if (document.body.classList.contains('lb-open')) return;
       if (/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) return;
       if (e.key === 'ArrowLeft') go(cur - 1);
       if (e.key === 'ArrowRight') go(cur + 1);
     });
+    car.addEventListener('car-go', e => go(e.detail));
     let x0 = null;
     car.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
     car.addEventListener('touchend', e => {
@@ -169,6 +171,62 @@
       x0 = null;
     });
     go(0);
+    slides.forEach(s => { const im = $('img', s); if (im) { const p = new Image(); p.src = im.src; } });
+  }
+
+  /* ---------- 이미지 확대 보기 ---------- */
+  const lb = $('#lightbox');
+  if (lb) {
+    const stage = $('.lb-stage', lb), lbImg = $('img', stage), lbCap = $('.lb-cap', lb);
+    let group = [], idx = 0;
+    const render = () => {
+      const im = group[idx];
+      stage.classList.remove('zoom');
+      lbImg.src = im.closest('a') ? im.closest('a').href : im.src;
+      lbImg.alt = im.alt;
+      const fc = im.closest('figure') && $('figcaption', im.closest('figure'));
+      lbCap.textContent = (fc ? fc.textContent.replace('클릭하면 확대됩니다.', '').trim() : im.alt) + (group.length > 1 ? '  (' + (idx + 1) + ' / ' + group.length + ')' : '');
+      $$('.lb-btn', lb).forEach(b => { b.style.visibility = group.length > 1 ? 'visible' : 'hidden'; });
+    };
+    const open = im => {
+      const c = im.closest('.carousel');
+      group = c ? $$('.slide img', c) : [im];
+      idx = group.indexOf(im);
+      render();
+      lb.hidden = false;
+      document.body.classList.add('lb-open');
+    };
+    const close = () => { lb.hidden = true; document.body.classList.remove('lb-open'); };
+    const step = d => {
+      idx = (idx + d + group.length) % group.length;
+      render();
+      if (car && group[0].closest('.carousel')) car.dispatchEvent(new CustomEvent('car-go', { detail: idx }));
+    };
+    document.addEventListener('click', e => {
+      const im = e.target.closest('.page figure img');
+      if (!im) return;
+      e.preventDefault();
+      open(im);
+    });
+    $('.lb-close', lb).addEventListener('click', close);
+    $('.lb-btn.prev', lb).addEventListener('click', () => step(-1));
+    $('.lb-btn.next', lb).addEventListener('click', () => step(1));
+    lb.addEventListener('click', e => { if (e.target === lb || e.target === stage) close(); });
+    lbImg.addEventListener('click', e => {
+      const r = lbImg.getBoundingClientRect();
+      const fx = (e.clientX - r.left) / r.width, fy = (e.clientY - r.top) / r.height;
+      stage.classList.toggle('zoom');
+      if (stage.classList.contains('zoom')) {
+        stage.scrollLeft = lbImg.offsetWidth * fx - stage.clientWidth / 2;
+        stage.scrollTop = lbImg.offsetHeight * fy - stage.clientHeight / 2;
+      }
+    });
+    document.addEventListener('keydown', e => {
+      if (lb.hidden) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') step(-1);
+      if (e.key === 'ArrowRight') step(1);
+    });
   }
 
   show(routeFromHash());

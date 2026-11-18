@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=6">
+<link rel="stylesheet" href="assets/css/style.css?v=7">
 </head>
 <body>
 <div class="layout">
@@ -87,14 +87,14 @@
   <p class="skills-label">Skills</p>
   <p class="meta skills">Kubernetes · Rook-Ceph · PostgreSQL · Go · FFmpeg · GitLab CI · ArgoCD · Prometheus · Grafana · Kepler · Cloudflare CDN · Gemini</p>
   <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="프로젝트 이미지">
-    <div class="slides">
-      <figure class="slide"><a href="assets/img/ssukssuk_network.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_network.jpg" alt="네트워크 구성" loading="lazy"></a><figcaption>네트워크 구성</figcaption></figure>
-      <figure class="slide"><a href="assets/img/ssukssuk_storage.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_storage.jpg" alt="미디어 처리·저장 파이프라인" loading="lazy"></a><figcaption>미디어 처리·저장 파이프라인</figcaption></figure>
-      <figure class="slide"><a href="assets/img/ssukssuk_erd.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_erd.jpg" alt="풀스택 ERD" loading="lazy"></a><figcaption>풀스택 ERD</figcaption></figure>
-      <figure class="slide"><a href="assets/img/ssukssuk_gitops.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_gitops.jpg" alt="GitLab CI/CD · GitOps" loading="lazy"></a><figcaption>GitLab CI/CD · GitOps</figcaption></figure>
-      <figure class="slide"><a href="assets/img/ssukssuk_chatops.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_chatops.jpg" alt="AI ChatOps 장애 대응" loading="lazy"></a><figcaption>AI ChatOps 장애 대응</figcaption></figure>
-    </div>
     <button class="car-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
+    <div class="slides">
+      <figure class="slide"><a href="assets/img/ssukssuk_network.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_network.jpg" alt="네트워크 구성" width="1920" height="1080" decoding="async" fetchpriority="high"></a><figcaption>네트워크 구성</figcaption></figure>
+      <figure class="slide"><a href="assets/img/ssukssuk_storage.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_storage.jpg" alt="미디어 처리·저장 파이프라인" width="1920" height="1080" decoding="async"></a><figcaption>미디어 처리·저장 파이프라인</figcaption></figure>
+      <figure class="slide"><a href="assets/img/ssukssuk_erd.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_erd.jpg" alt="풀스택 ERD" width="1920" height="1080" decoding="async"></a><figcaption>풀스택 ERD</figcaption></figure>
+      <figure class="slide"><a href="assets/img/ssukssuk_gitops.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_gitops.jpg" alt="GitLab CI/CD · GitOps" width="1920" height="1080" decoding="async"></a><figcaption>GitLab CI/CD · GitOps</figcaption></figure>
+      <figure class="slide"><a href="assets/img/ssukssuk_chatops.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_chatops.jpg" alt="AI ChatOps 장애 대응" width="1920" height="1080" decoding="async"></a><figcaption>AI ChatOps 장애 대응</figcaption></figure>
+    </div>
     <button class="car-btn next" type="button" aria-label="다음 이미지">&rsaquo;</button>
     <p class="car-count" aria-live="polite"></p>
   </div>
@@ -150,7 +150,7 @@
   <h2>네트워크 구성</h2>
   <figure>
     <a href="assets/img/ssukssuk_network.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_network.jpg" alt="master, worker1~3, core 노드가 172.16.8.0/24 내부망에 연결되고 worker마다 Ceph 디스크가 붙은 네트워크 구성도" loading="lazy"></a>
-    <figcaption>master(Control Plane) · worker1~3(App Pod + Ceph OSD) · core(GitLab Runner, Prometheus/Grafana). 클릭하면 원본이 열립니다.</figcaption>
+    <figcaption>master(Control Plane) · worker1~3(App Pod + Ceph OSD) · core(GitLab Runner, Prometheus/Grafana). 클릭하면 확대됩니다.</figcaption>
   </figure>
   <div class="tablewrap"><table>
     <tr><th>master</th><td>Control Plane, CNI(Calico), CI/CD 총괄</td><td>2 vCPU · 8GB</td></tr>
@@ -245,7 +245,7 @@
   <h2>아키텍처</h2>
   <figure>
     <a href="assets/img/Eclipse_architec_v1.3.jpg" target="_blank" rel="noopener"><img src="assets/img/Eclipse_architec_v1.3.jpg" alt="AWS 도쿄(Primary)와 서울(DR Standby), KT Cloud 계정 A/B로 구성된 전체 인프라 아키텍처" loading="lazy"></a>
-    <figcaption>전체 인프라 (AWS 도쿄 Primary · 서울 DR Standby · KT Cloud 계정 A/B). 클릭하면 원본이 열립니다.</figcaption>
+    <figcaption>전체 인프라 (AWS 도쿄 Primary · 서울 DR Standby · KT Cloud 계정 A/B). 클릭하면 확대됩니다.</figcaption>
   </figure>
   <figure>
     <a href="assets/img/Eclipse_workflow_v1.3.jpg" target="_blank" rel="noopener"><img src="assets/img/Eclipse_workflow_v1.3.jpg" alt="평시, 테넌트 환경 제공, DR 세 가지 흐름을 나타낸 워크플로우" loading="lazy"></a>
@@ -303,6 +303,13 @@
 
 </main>
 </div>
-<script src="assets/js/script.js?v=6" defer></script>
+<script src="assets/js/script.js?v=7" defer></script>
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
+  <button class="lb-close" type="button" aria-label="닫기">&times;</button>
+  <button class="lb-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
+  <div class="lb-stage"><img alt=""></div>
+  <button class="lb-btn next" type="button" aria-label="다음 이미지">&rsaquo;</button>
+  <p class="lb-cap"></p>
+</div>
 </body>
 </html>
