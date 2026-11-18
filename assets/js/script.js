@@ -141,5 +141,35 @@
     });
   });
 
+  /* ---------- 이미지 캐러셀 ---------- */
+  const car = $('#carousel');
+  if (car) {
+    const slides = $$('.slide', car);
+    const cnt = $('.car-count', car);
+    let cur = 0;
+    const go = n => {
+      cur = (n + slides.length) % slides.length;
+      slides.forEach((s, i) => s.classList.toggle('on', i === cur));
+      cnt.textContent = (cur + 1) + ' / ' + slides.length;
+    };
+    $('.prev', car).addEventListener('click', () => go(cur - 1));
+    $('.next', car).addEventListener('click', () => go(cur + 1));
+    document.addEventListener('keydown', e => {
+      if (!pageOf['projects/ssukssuk'].classList.contains('active')) return;
+      if (/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) return;
+      if (e.key === 'ArrowLeft') go(cur - 1);
+      if (e.key === 'ArrowRight') go(cur + 1);
+    });
+    let x0 = null;
+    car.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    car.addEventListener('touchend', e => {
+      if (x0 === null) return;
+      const d = e.changedTouches[0].clientX - x0;
+      if (Math.abs(d) > 40) go(cur + (d < 0 ? 1 : -1));
+      x0 = null;
+    });
+    go(0);
+  }
+
   show(routeFromHash());
 })();

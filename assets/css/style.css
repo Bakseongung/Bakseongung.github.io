@@ -123,3 +123,15 @@ ul.work b { display: block; color: var(--ok); font-weight: 600; }
 figure { margin: 16px 0 28px; }
 figure img { display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 4px; }
 figcaption { margin-top: 6px; font-size: .85rem; color: var(--muted); }
+/* 이미지 캐러셀 */
+.carousel { position: relative; margin: 16px 0 24px; }
+.carousel .slides { position: relative; }
+.carousel .slide { display: none; margin: 0; }
+.carousel .slide.on { display: block; }
+.car-btn { position: absolute; top: 40%; transform: translateY(-50%); width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; background: rgba(255,255,255,.92); color: var(--ink); font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.car-btn:hover { background: #fff; border-color: var(--muted); }
+.car-btn.prev { left: 8px; }
+.car-btn.next { right: 8px; }
+.car-count { margin: 0; text-align: center; color: var(--muted); font-size: .85rem; }
+ul.summary { margin: 8px 0 12px; }
+ul.summary li { margin: 6px 0; }
