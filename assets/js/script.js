@@ -26,7 +26,7 @@
     });
   });
 
-  /* ---------- 라우팅: #/projects/failoversky 처럼 문서별 주소 ---------- */
+  /* ---------- 라우팅: #/projects/ssukssuk 처럼 문서별 주소 ---------- */
   const routeFromHash = () => {
     const r = decodeURIComponent(location.hash.replace(/^#\/?/, '')).replace(/\/$/, '');
     return pageOf[r] ? r : DEFAULT;
