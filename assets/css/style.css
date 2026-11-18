@@ -135,3 +135,6 @@ figcaption { margin-top: 6px; font-size: .85rem; color: var(--muted); }
 .car-count { margin: 0; text-align: center; color: var(--muted); font-size: .85rem; }
 ul.summary { margin: 8px 0 12px; }
 ul.summary li { margin: 6px 0; }
+.proj-head { margin: 0 0 12px; }
+.skills-label { margin: 0 0 2px; font-weight: 700; }
+.skills { margin: 0 0 8px; }
