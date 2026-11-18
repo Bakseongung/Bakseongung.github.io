@@ -104,6 +104,14 @@
     <li>AWS S3 대신 Kubernetes 위의 Rook-Ceph(Erasure Coding 2+1, 저장 효율 66.7%)로 S3 호환 스토리지를 직접 구축했습니다.</li>
     <li>CI/CD·GitOps, AI ChatOps, FinOps 모니터링까지 구성해 저장 효율, 운영 안정성, 비용 효율성을 검증했습니다.</li>
   </ul>
+  <h2>트러블슈팅</h2>
+  <ul class="work">
+    <li><strong>csi-rbdplugin CrashLoopBackOff (25시간 지속)</strong> master 노드에만 rbd 커널 모듈이 없어 Ceph RBD 볼륨 마운트 실패 <b><code>modprobe rbd</code> 후 <code>/etc/modules-load.d/ceph.conf</code>에 영구 등록</b></li>
+    <li><strong>Grafana SQLITE_BUSY 락 경합</strong> EC 풀 PVC 위의 SQLite가 쓰기 경합으로 잠김 <b>StatefulSet을 <code>--cascade=orphan</code>으로 삭제 후 core 노드 hostPath로 이전</b></li>
+    <li><strong>Go 워커 → Ceph RGW 업로드 오류</strong> CRC32 체크섬 501 에러와 페이로드 서명 문제 <b><code>DisablePayloadSigning</code> 적용, 체크섬은 필요 시에만 계산하도록 변경, ClusterIP 엔드포인트로 TLS SAN 불일치 우회</b></li>
+    <li><strong>VMware NAT 서비스 오류 1067</strong> 포트포워딩 규칙(2222~2226) 충돌로 NAT 서비스 바인딩 실패 <b>규칙을 하나씩 제거·재등록하며 서비스 재시작으로 검증</b></li>
+  </ul>
+
   <p class="meta">Kubernetes · Rook-Ceph · PostgreSQL · Go · FFmpeg · GitLab CI · ArgoCD · Prometheus · Grafana · Kepler · Cloudflare CDN · Gemini</p>
 </section>
 
