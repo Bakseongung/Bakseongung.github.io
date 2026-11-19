@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=7">
+<link rel="stylesheet" href="assets/css/style.css?v=8">
 </head>
 <body>
 <div class="layout">
@@ -34,7 +34,7 @@
           <div class="node"><button class="toggle" type="button" aria-label="프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/projects" data-route="projects"><span class="label">프로젝트</span></a></div>
           <ul>
             <li class="has-children">
-              <div class="node"><button class="toggle" type="button" aria-label="쑥쑥찰칵 1억 스토리지 비용 절감 프로젝트 펼치기/접기" aria-expanded="false"></button><a href="#/projects/ssukssuk" data-route="projects/ssukssuk"><span class="label">쑥쑥찰칵 1억 스토리지 비용 절감 프로젝트</span></a></div>
+              <div class="node"><button class="toggle" type="button" aria-label="쑥쑥찰칵 성장앨범 10PB 12억 비용 절감 솔루션 펼치기/접기" aria-expanded="false"></button><a href="#/projects/ssukssuk" data-route="projects/ssukssuk"><span class="label">쑥쑥찰칵 성장앨범 10PB 12억 비용 절감 솔루션</span></a></div>
               <ul>
                 <li><div class="node"><span class="spacer"></span><a href="#/projects/ssukssuk/architecture" data-route="projects/ssukssuk/architecture"><span class="label">아키텍처</span></a></div></li>
                 <li><div class="node"><span class="spacer"></span><a href="#/projects/ssukssuk/ops" data-route="projects/ssukssuk/ops"><span class="label">DevSecOps · AI ChatOps</span></a></div></li>
@@ -68,7 +68,7 @@
   </table></div>
   <h2>프로젝트</h2>
   <ul class="plain">
-    <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 1억 스토리지 비용 절감 프로젝트</strong></a><br><span class="meta">Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>
+    <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>
     <li><a href="#/projects/dr-a2"><strong>멀티클라우드 기반 업종 특화 SaaS 플랫폼</strong></a><br><span class="meta">제조에서 금융으로 · Team Eclipse · IaC/프로비저닝, DB 설계</span></li>
   </ul>
 </section>
@@ -76,28 +76,36 @@
 <section class="page" data-route="projects" data-title="프로젝트">
   <h1>프로젝트</h1>
   <ul class="plain">
-    <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 1억 스토리지 비용 절감 프로젝트</strong></a><br><span class="meta">Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>
+    <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>
     <li><a href="#/projects/dr-a2"><strong>멀티클라우드 기반 업종 특화 SaaS 플랫폼</strong></a><br><span class="meta">제조에서 금융으로 · Team Eclipse · IaC/프로비저닝, DB 설계</span></li>
   </ul>
 </section>
 
-<section class="page" data-route="projects/ssukssuk" data-title="쑥쑥찰칵 1억 스토리지 비용 절감 프로젝트">
-  <h1>쑥쑥찰칵 1억 스토리지 비용 절감 프로젝트</h1>
+<section class="page" data-route="projects/ssukssuk" data-title="쑥쑥찰칵 성장앨범 10PB 12억 비용 절감 솔루션">
+  <h1 class="proj-title">쑥쑥찰칵 성장앨범<br>스토리지 10PB 환경<br>회귀 분석 시 AWS S3 대비<br>12억 비용 절감 솔루션</h1>
   <p class="sub proj-head">Team Apple 4인 / 팀장 및 IaC/프로비저닝, AIOps<br>기간 2026.07.15 ~ 2026.08.15</p>
   <p class="skills-label">Skills</p>
   <p class="meta skills">Kubernetes · Rook-Ceph · PostgreSQL · Go · FFmpeg · GitLab CI · ArgoCD · Prometheus · Grafana · Kepler · Cloudflare CDN · Gemini</p>
   <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="프로젝트 이미지">
     <button class="car-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
     <div class="slides">
-      <figure class="slide"><a href="assets/img/ssukssuk_network.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_network.jpg" alt="네트워크 구성" width="1920" height="1080" decoding="async" fetchpriority="high"></a><figcaption>네트워크 구성</figcaption></figure>
-      <figure class="slide"><a href="assets/img/ssukssuk_storage.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_storage.jpg" alt="미디어 처리·저장 파이프라인" width="1920" height="1080" decoding="async"></a><figcaption>미디어 처리·저장 파이프라인</figcaption></figure>
+      <figure class="slide"><a href="assets/img/ssukssuk_cover.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_cover.jpg" alt="쑥쑥찰칵 성장앨범 표지" width="1920" height="1080" decoding="async" fetchpriority="high"></a><figcaption>쑥쑥찰칵 성장앨범 표지</figcaption></figure>
+      <figure class="slide"><a href="assets/img/ssukssuk_network.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_network.jpg" alt="네트워크 구성" width="1920" height="1080" decoding="async"></a><figcaption>네트워크 구성</figcaption></figure>
       <figure class="slide"><a href="assets/img/ssukssuk_erd.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_erd.jpg" alt="풀스택 ERD" width="1920" height="1080" decoding="async"></a><figcaption>풀스택 ERD</figcaption></figure>
-      <figure class="slide"><a href="assets/img/ssukssuk_gitops.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_gitops.jpg" alt="GitLab CI/CD · GitOps" width="1920" height="1080" decoding="async"></a><figcaption>GitLab CI/CD · GitOps</figcaption></figure>
-      <figure class="slide"><a href="assets/img/ssukssuk_chatops.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_chatops.jpg" alt="AI ChatOps 장애 대응" width="1920" height="1080" decoding="async"></a><figcaption>AI ChatOps 장애 대응</figcaption></figure>
+      <figure class="slide"><a href="assets/img/ssukssuk_storage.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_storage.jpg" alt="미디어 파이프라인" width="1920" height="1080" decoding="async"></a><figcaption>미디어 파이프라인</figcaption></figure>
+      <figure class="slide"><a href="assets/img/ssukssuk_gitops.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_gitops.jpg" alt="CI/CD 보안" width="1920" height="1080" decoding="async"></a><figcaption>CI/CD 보안</figcaption></figure>
+      <figure class="slide"><a href="assets/img/ssukssuk_chatops.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_chatops.jpg" alt="메트릭 에러 발생 시 회고용 AI 문서 자동화" width="1920" height="1080" decoding="async"></a><figcaption>메트릭 에러 발생 시 회고용 AI 문서 자동화</figcaption></figure>
+      <figure class="slide"><a href="assets/img/ssukssuk_metrics.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_metrics.jpg" alt="메트릭 관리" width="1920" height="1080" decoding="async"></a><figcaption>메트릭 관리</figcaption></figure>
+      <figure class="slide"><a href="assets/img/ssukssuk_cdn.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_cdn.jpg" alt="CDN-origin" width="1920" height="1080" decoding="async"></a><figcaption>CDN-origin</figcaption></figure>
+      <figure class="slide"><a href="assets/img/ssukssuk_dashboard.jpg" target="_blank" rel="noopener"><img src="assets/img/ssukssuk_dashboard.jpg" alt="Grafana FinOps 대시보드" width="1920" height="1080" decoding="async"></a><figcaption>Grafana FinOps 대시보드</figcaption></figure>
     </div>
     <button class="car-btn next" type="button" aria-label="다음 이미지">&rsaquo;</button>
     <p class="car-count" aria-live="polite"></p>
   </div>
+  <p class="pdf-links">
+    <a class="pdf-btn" href="assets/files/ssukssuk_final.pdf" target="_blank" rel="noopener">PDF 상세 보기</a>
+    <a class="pdf-btn" href="assets/files/ssukssuk_final.pdf" download="쑥쑥찰칵_최종발표.pdf">PDF 다운로드</a>
+  </p>
   <ul class="plain summary">
     <li>사용자 약 100만 명 규모의 성장앨범 서비스 '쑥쑥찰칵'을 벤치마킹해, 사진·영상 저장 비용 문제를 분석한 프로젝트입니다.</li>
     <li>AWS S3 대신 Kubernetes 위의 Rook-Ceph(Erasure Coding 2+1, 저장 효율 66.7%)로 S3 호환 스토리지를 직접 구축했습니다.</li>
@@ -303,7 +311,7 @@
 
 </main>
 </div>
-<script src="assets/js/script.js?v=7" defer></script>
+<script src="assets/js/script.js?v=8" defer></script>
 <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
   <button class="lb-close" type="button" aria-label="닫기">&times;</button>
   <button class="lb-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>

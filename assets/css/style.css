@@ -159,3 +159,9 @@ figure img { cursor: zoom-in; }
 .lb-cap { grid-column: 2; grid-row: 2; margin: 0; padding: 10px 0 14px; text-align: center; color: #ddd; font-size: .9rem; }
 body.lb-open { overflow: hidden; }
 @media (max-width: 600px) { .lightbox { grid-template-columns: 36px minmax(0,1fr) 36px; } .lb-btn { width: 32px; height: 32px; font-size: 1.3rem; } }
+
+/* 프로젝트 제목, PDF 버튼 */
+h1.proj-title { line-height: 1.35; }
+.pdf-links { display: flex; gap: 8px; flex-wrap: wrap; margin: -8px 0 24px; }
+.pdf-btn { display: inline-block; padding: 7px 16px; border: 1px solid var(--line); border-radius: 4px; color: var(--ink); text-decoration: none; font-size: .9rem; background: #fff; }
+.pdf-btn:hover { border-color: var(--muted); }
