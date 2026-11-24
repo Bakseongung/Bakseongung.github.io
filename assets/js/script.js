@@ -230,5 +230,35 @@
     });
   }
 
+  /* ---------- 테마 설정 ---------- */
+  const tBtn = $('#theme-btn'), tPanel = $('#theme-panel');
+  if (tBtn && tPanel) {
+    const root = document.documentElement;
+    const save = (k, v) => { try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch (e) {} };
+    const sync = () => {
+      const mode = root.dataset.theme || 'system', acc = root.dataset.accent || 'blue';
+      $$('[data-mode]', tPanel).forEach(b => b.setAttribute('aria-checked', b.dataset.mode === mode));
+      $$('[data-accent]', tPanel).forEach(b => b.setAttribute('aria-checked', b.dataset.accent === acc));
+    };
+    const toggle = open => { tPanel.hidden = !open; tBtn.setAttribute('aria-expanded', open); };
+    tBtn.addEventListener('click', e => { e.stopPropagation(); toggle(tPanel.hidden); });
+    tPanel.addEventListener('click', e => {
+      e.stopPropagation();
+      const m = e.target.closest('[data-mode]'), a = e.target.closest('[data-accent]');
+      if (m) {
+        if (m.dataset.mode === 'system') delete root.dataset.theme; else root.dataset.theme = m.dataset.mode;
+        save('theme', m.dataset.mode === 'system' ? null : m.dataset.mode);
+      }
+      if (a) {
+        if (a.dataset.accent === 'blue') delete root.dataset.accent; else root.dataset.accent = a.dataset.accent;
+        save('accent', a.dataset.accent === 'blue' ? null : a.dataset.accent);
+      }
+      sync();
+    });
+    document.addEventListener('click', () => toggle(false));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !tPanel.hidden) { toggle(false); tBtn.focus(); } });
+    sync();
+  }
+
   show(routeFromHash());
 })();

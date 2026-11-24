@@ -5,15 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>박성웅 | Portfolio</title>
 <meta name="description" content="클라우드 인프라 엔지니어 박성웅의 포트폴리오">
-<script>document.documentElement.classList.add('js');</script>
+<script>document.documentElement.classList.add('js');
+try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent');
+  if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+  if (c) document.documentElement.dataset.accent = c; } catch (e) {}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=9">
+<link rel="stylesheet" href="assets/css/style.css?v=10">
 </head>
 <body>
+<div class="theme-ctl" id="theme-ctl">
+  <button class="theme-btn" id="theme-btn" type="button" aria-expanded="false" aria-controls="theme-panel" aria-label="테마 설정">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 0 18c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8Zm-5.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm3-4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm3 4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"/></svg>
+  </button>
+  <div class="theme-panel" id="theme-panel" hidden>
+    <p class="tp-label">화면 모드</p>
+    <div class="tp-modes" role="radiogroup" aria-label="화면 모드">
+      <button type="button" role="radio" data-mode="system">시스템</button>
+      <button type="button" role="radio" data-mode="light">라이트</button>
+      <button type="button" role="radio" data-mode="dark">다크</button>
+    </div>
+    <p class="tp-label">포인트 컬러</p>
+    <div class="tp-colors" role="radiogroup" aria-label="포인트 컬러">
+      <button type="button" role="radio" data-accent="blue" aria-label="파랑"></button>
+      <button type="button" role="radio" data-accent="green" aria-label="초록"></button>
+      <button type="button" role="radio" data-accent="purple" aria-label="보라"></button>
+      <button type="button" role="radio" data-accent="orange" aria-label="주황"></button>
+      <button type="button" role="radio" data-accent="gray" aria-label="회색"></button>
+    </div>
+  </div>
+</div>
 <div class="layout">
 
 <aside class="sidebar" id="sidebar">
@@ -51,6 +75,12 @@
             </li>
           </ul>
         </li>
+        <li class="has-children open">
+          <div class="node"><button class="toggle" type="button" aria-label="토이 프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/toys" data-route="toys"><span class="label">토이 프로젝트</span></a></div>
+          <ul>
+            <li><div class="node"><span class="spacer"></span><a href="#/toys/clover" data-route="toys/clover"><span class="label">OpenStack VM 오토스케일링 플랫폼</span></a></div></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </div>
@@ -72,6 +102,10 @@
     <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>
     <li><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">KT Cloud TECH UP 해커톤 2026 대상 · Team Eclipse · SMT AI & QA</span></li>
     <li><a href="#/projects/dr-a2"><strong>멀티클라우드 기반 업종 특화 SaaS 플랫폼</strong></a><br><span class="meta">제조에서 금융으로 · Team Eclipse · IaC/프로비저닝, DB 설계</span></li>
+  </ul>
+  <h2>토이 프로젝트</h2>
+  <ul class="plain">
+    <li><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">Team Clover · PM, 시스템 아키텍처 설계 · OpenStack, ZeroTier, Docker Swarm</span></li>
   </ul>
 </section>
 
@@ -108,6 +142,7 @@
   <p class="pdf-links">
     <a class="pdf-btn" href="assets/files/ssukssuk_final.pdf" target="_blank" rel="noopener">PDF 상세 보기</a>
     <a class="pdf-btn" href="assets/files/ssukssuk_final.pdf" download="쑥쑥찰칵_최종발표.pdf">PDF 다운로드</a>
+    <a class="pdf-btn" href="https://github.com/980-Ti/family-frame" target="_blank" rel="noopener">GitHub 저장소</a>
   </p>
   <ul class="plain summary">
     <li>사용자 약 100만 명 규모의 성장앨범 서비스 '쑥쑥찰칵'을 벤치마킹해, 사진·영상 저장 비용 문제를 분석한 프로젝트입니다.</li>
@@ -364,9 +399,88 @@
   </ul>
 </section>
 
+<section class="page" data-route="toys" data-title="토이 프로젝트">
+  <h1>토이 프로젝트</h1>
+  <ul class="plain">
+    <li><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">Team Clover · PM, 시스템 아키텍처 설계 · OpenStack, ZeroTier, Docker Swarm</span></li>
+  </ul>
+</section>
+
+<section class="page" data-route="toys/clover" data-title="OpenStack VM 오토스케일링 플랫폼">
+  <h1 class="proj-title">OpenStack 기반 VM 오토스케일링<br>운영 자동화 클라우드 플랫폼 구축</h1>
+  <p class="sub proj-head">Team Clover 5인 / PM 및 시스템 아키텍처 설계<br>기간 2026.06.11 ~ 2026.07.14</p>
+  <p class="skills-label">Skills</p>
+  <p class="meta skills">OpenStack · ZeroTier · Docker Swarm · HAProxy · Cloudflare Tunnel · Flask · Ansible · Cloud-init · Prometheus · Grafana · cAdvisor · ELK · HashiCorp Vault · MinIO · NFS · AWS S3 · UFW · Fail2ban · ModSecurity · Auditd</p>
+  <div class="carousel" aria-roledescription="carousel" aria-label="프로젝트 이미지">
+    <button class="car-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
+    <div class="slides">
+      <figure class="slide"><a href="assets/img/clover_cover.jpg" target="_blank" rel="noopener"><img src="assets/img/clover_cover.jpg" alt="OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼" width="1920" height="1080" decoding="async"></a><figcaption>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼</figcaption></figure>
+      <figure class="slide"><a href="assets/img/clover_goal.jpg" target="_blank" rel="noopener"><img src="assets/img/clover_goal.jpg" alt="목표 · OpenStack에서도 ASG를 구현할 수 없을까?" width="1920" height="1080" decoding="async"></a><figcaption>목표 · OpenStack에서도 ASG를 구현할 수 없을까?</figcaption></figure>
+      <figure class="slide"><a href="assets/img/clover_network.jpg" target="_blank" rel="noopener"><img src="assets/img/clover_network.jpg" alt="네트워크 (ZeroTier Public/Private)" width="1920" height="1080" decoding="async"></a><figcaption>네트워크 (ZeroTier Public/Private)</figcaption></figure>
+      <figure class="slide"><a href="assets/img/clover_external.jpg" target="_blank" rel="noopener"><img src="assets/img/clover_external.jpg" alt="외부 사용자 접근 (Cloudflare Tunnel · 4계층 보안 · HAProxy)" width="1920" height="1080" decoding="async"></a><figcaption>외부 사용자 접근 (Cloudflare Tunnel · 4계층 보안 · HAProxy)</figcaption></figure>
+      <figure class="slide"><a href="assets/img/clover_admin.jpg" target="_blank" rel="noopener"><img src="assets/img/clover_admin.jpg" alt="관리자 접근 (Flask 관리자 페이지 · Grafana · Kibana · Vault · MinIO)" width="1920" height="1080" decoding="async"></a><figcaption>관리자 접근 (Flask 관리자 페이지 · Grafana · Kibana · Vault · MinIO)</figcaption></figure>
+      <figure class="slide"><a href="assets/img/clover_autoscaling.jpg" target="_blank" rel="noopener"><img src="assets/img/clover_autoscaling.jpg" alt="오토스케일링 흐름" width="1920" height="1080" decoding="async"></a><figcaption>오토스케일링 흐름</figcaption></figure>
+      <figure class="slide"><a href="assets/img/clover_schedule.jpg" target="_blank" rel="noopener"><img src="assets/img/clover_schedule.jpg" alt="프로젝트 일정" width="1920" height="1080" decoding="async"></a><figcaption>프로젝트 일정</figcaption></figure>
+    </div>
+    <button class="car-btn next" type="button" aria-label="다음 이미지">&rsaquo;</button>
+    <p class="car-count" aria-live="polite"></p>
+  </div>
+  <p class="pdf-links">
+    <a class="pdf-btn" href="assets/files/clover_final.pdf" target="_blank" rel="noopener">PDF 상세 보기</a>
+    <a class="pdf-btn" href="assets/files/clover_final.pdf" download="CLOVER_최종발표.pdf">PDF 다운로드</a>
+    <a class="pdf-btn" href="https://github.com/Bakseongung/ktcloud_Clover" target="_blank" rel="noopener">GitHub 저장소</a>
+    <a class="pdf-btn" href="https://screenapp.io/app/v/0uByXpXXAm" target="_blank" rel="noopener">데모 영상</a>
+  </p>
+  <ul class="plain summary">
+    <li>AWS의 Auto Scaling Group처럼, OpenStack에서도 부하에 따라 VM을 자동으로 늘리는 플랫폼을 직접 구현한 프로젝트입니다.</li>
+    <li>ZeroTier 오버레이망 위에 OpenStack·Docker Swarm·HAProxy를 구성하고, Prometheus 알림부터 Ansible·Cloud-init으로 VM 생성과 Swarm 편입까지 자동화했습니다.</li>
+    <li>저는 PM으로 프로젝트를 총괄하며 인프라 아키텍처를 설계하고 Flask 관리자 페이지를 개발했습니다.</li>
+  </ul>
+  <h2>트러블슈팅</h2>
+  <ul class="work ts">
+    <li><strong>악성코드 감염 및 보안 구조 개선</strong>
+      <span><em>문제</em>운영 중 Control 서버와 Vault 서버에서 Diicot 계열 크립토마이너/백도어를 발견했고, 비정상 프로세스 실행과 외부 의심 통신을 확인</span>
+      <span><em>원인</em>초기 운영 환경에 접근 제어와 Secret 관리 체계가 부족했음</span>
+      <span><em>해결</em>감염 노드를 ZeroTier에서 격리하고 SSH Key·Token을 교체, HashiCorp Vault로 Secret을 중앙 관리, UFW·Fail2ban·ModSecurity·Auditd로 보안 체계 강화</span>
+      <b>추가 확산 방지, 민감정보 관리 구조 개선</b></li>
+    <li><strong>NFS 기반 공유 스토리지 구성 문제</strong>
+      <span><em>문제</em>Docker Swarm에서 Worker Node별 로컬 스토리지를 쓰다 보니, 컨테이너가 다른 노드로 옮겨가면 기존 데이터에 접근할 수 없고 노드별 데이터가 어긋남</span>
+      <span><em>원인</em>Docker Swarm은 컨테이너 배치는 자동화하지만 로컬 볼륨 데이터 동기화는 지원하지 않음</span>
+      <span><em>해결</em>중앙 Storage 서버에 NFS를 구성해 Worker Node에 공유 볼륨으로 마운트하고 Docker Volume Driver를 NFS 기반으로 변경, 저장 데이터는 MinIO로 백업</span>
+      <b>모든 Worker Node가 같은 데이터에 접근, 컨테이너 이동 시에도 데이터 유지</b></li>
+    <li><strong>모니터링 메트릭 수집 누락</strong>
+      <span><em>문제</em>Grafana 대시보드에 새로 생긴 노드의 CPU·Memory 메트릭이 표시되지 않음</span>
+      <span><em>원인</em>Prometheus는 미리 등록된 Target에서만 Pull 방식으로 수집하는데, 오토스케일링으로 생긴 VM 정보가 Target에 자동 반영되지 않음</span>
+      <span><em>해결</em>VM 생성 파이프라인에 모니터링 등록 단계를 추가하고, Node Exporter 상태 확인 후 Prometheus Target 설정을 자동 업데이트</span>
+      <b>Scale-Out 이후에도 신규 VM 메트릭을 실시간 수집</b></li>
+    <li><strong>Auto Scaling VM 자동 편입 문제</strong>
+      <span><em>문제</em>OpenStack에서 VM 생성은 성공했지만 새 VM이 ZeroTier와 Docker Swarm 클러스터에 자동으로 편입되지 않음</span>
+      <span><em>원인</em>ZeroTier 노드 승인 절차가 필요하고, Cloud-init 실행 순서와 Swarm Join 시점이 맞지 않음</span>
+      <span><em>해결</em>VM 초기화 파이프라인을 다시 설계해 Cloud-init으로 네트워크 설정을 자동화하고, Swarm Worker Join 자동화와 재시도 로직 추가</span>
+      <b>VM 생성부터 서비스 클러스터 편입까지 자동화</b></li>
+    <li><strong>Auto Scaling 안정화 문제</strong>
+      <span><em>문제</em>CPU Threshold를 넘으면 Alert가 여러 번 발생해 VM이 중복 생성됨</span>
+      <span><em>원인</em>Scale 이벤트 상태 관리와 Cooldown 로직이 없었음</span>
+      <span><em>해결</em>현재 인스턴스 상태 확인 로직을 추가하고 Cooldown Time을 적용해 중복 Scale 이벤트 방지</span>
+      <b>불필요한 VM 생성 없이 안정적인 Scale-Out</b></li>
+  </ul>
+
+  <h2>아쉬운 점</h2>
+  <ul class="work ts">
+    <li><strong>서비스 운영 보안 강화 필요</strong>
+      <span>인프라 보안 체계는 갖췄지만 실제 서비스 운영 관점의 계정·Secret 관리 정책과 IAM 기반 권한·인증 체계는 보완이 필요함</span></li>
+    <li><strong>ZeroTier 기반 네트워크 성능 한계</strong>
+      <span>오버레이 네트워크 특성상 물리 네트워크보다 지연이 생길 수 있어, 대규모 트래픽에서는 전용 네트워크나 최적화된 VPN 구조 검토가 필요함</span></li>
+    <li><strong>Auto Scale-In 미구현</strong>
+      <span>트래픽 증가에 대응하는 Scale-Out 중심으로 구현했고, 축소(Scale-In)는 기간이 더 필요했음</span></li>
+    <li><strong>서비스 플랫폼 확장성 한계</strong>
+      <span>관리자 기능과 인프라 관리 중심으로 구현해, 실제 사용자 서비스를 위해서는 Backend·Database 연동과 MSA 구조 확장이 필요함</span></li>
+  </ul>
+</section>
+
 </main>
 </div>
-<script src="assets/js/script.js?v=9" defer></script>
+<script src="assets/js/script.js?v=10" defer></script>
 <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
   <button class="lb-close" type="button" aria-label="닫기">&times;</button>
   <button class="lb-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
