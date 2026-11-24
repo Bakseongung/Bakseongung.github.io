@@ -14,7 +14,7 @@ try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent'
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=10">
+<link rel="stylesheet" href="assets/css/style.css?v=12">
 </head>
 <body>
 <div class="theme-ctl" id="theme-ctl">
@@ -76,6 +76,12 @@ try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent'
           </ul>
         </li>
         <li class="has-children open">
+          <div class="node"><button class="toggle" type="button" aria-label="개인 프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/personal" data-route="personal"><span class="label">개인 프로젝트</span></a></div>
+          <ul>
+            <li><div class="node"><span class="spacer"></span><a href="#/personal/idc-insight" data-route="personal/idc-insight"><span class="label">IDC Insight · EagleFlow</span></a></div></li>
+          </ul>
+        </li>
+        <li class="has-children open">
           <div class="node"><button class="toggle" type="button" aria-label="토이 프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/toys" data-route="toys"><span class="label">토이 프로젝트</span></a></div>
           <ul>
             <li><div class="node"><span class="spacer"></span><a href="#/toys/clover" data-route="toys/clover"><span class="label">OpenStack VM 오토스케일링 플랫폼</span></a></div></li>
@@ -102,6 +108,10 @@ try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent'
     <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>
     <li><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">KT Cloud TECH UP 해커톤 2026 대상 · Team Eclipse · SMT AI & QA</span></li>
     <li><a href="#/projects/dr-a2"><strong>멀티클라우드 기반 업종 특화 SaaS 플랫폼</strong></a><br><span class="meta">제조에서 금융으로 · Team Eclipse · IaC/프로비저닝, DB 설계</span></li>
+  </ul>
+  <h2>개인 프로젝트</h2>
+  <ul class="plain">
+    <li><a href="#/personal/idc-insight"><strong>IDC Insight · EagleFlow: 실측 데이터로 운영하는 IDC 관제·자동 복구</strong></a><br><span class="meta">개인 프로젝트 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
   </ul>
   <h2>토이 프로젝트</h2>
   <ul class="plain">
@@ -289,7 +299,7 @@ try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent'
   <div class="carousel" aria-roledescription="carousel" aria-label="프로젝트 이미지">
     <button class="car-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
     <div class="slides">
-      <figure class="slide"><a href="assets/img/partnerhub_cover.jpg" target="_blank" rel="noopener"><img src="assets/img/partnerhub_cover.jpg" alt="KT Cloud TECH UP 해커톤 2026 대상 · Partnerhub Cloud 제안서" width="1920" height="1080" decoding="async"></a><figcaption>KT Cloud TECH UP 해커톤 2026 대상 · Partnerhub Cloud 제안서</figcaption></figure>
+      <figure class="slide"><a href="assets/img/partnerhub_cover.jpg?v=2" target="_blank" rel="noopener"><img src="assets/img/partnerhub_cover.jpg?v=2" alt="KT Cloud TECH UP 해커톤 2026 대상 · Partnerhub Cloud 제안서" width="1920" height="1080" decoding="async"></a><figcaption>KT Cloud TECH UP 해커톤 2026 대상 · Partnerhub Cloud 제안서</figcaption></figure>
       <figure class="slide"><a href="assets/img/partnerhub_summary.jpg" target="_blank" rel="noopener"><img src="assets/img/partnerhub_summary.jpg" alt="프로젝트 요약 (협력사 품질 관리 · AI PCB 공정 자동 검사)" width="1920" height="1080" decoding="async"></a><figcaption>프로젝트 요약 (협력사 품질 관리 · AI PCB 공정 자동 검사)</figcaption></figure>
       <figure class="slide"><a href="assets/img/partnerhub_background.jpg" target="_blank" rel="noopener"><img src="assets/img/partnerhub_background.jpg" alt="사업 배경 · SMT 공장 품질 추적" width="1920" height="1080" decoding="async"></a><figcaption>사업 배경 · SMT 공장 품질 추적</figcaption></figure>
       <figure class="slide"><a href="assets/img/partnerhub_swot.jpg" target="_blank" rel="noopener"><img src="assets/img/partnerhub_swot.jpg" alt="SWOT 분석" width="1920" height="1080" decoding="async"></a><figcaption>SWOT 분석</figcaption></figure>
@@ -399,6 +409,82 @@ try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent'
   </ul>
 </section>
 
+<section class="page" data-route="personal" data-title="개인 프로젝트">
+  <h1>개인 프로젝트</h1>
+  <ul class="plain">
+    <li><a href="#/personal/idc-insight"><strong>IDC Insight · EagleFlow: 실측 데이터로 운영하는 IDC 관제·자동 복구</strong></a><br><span class="meta">개인 프로젝트 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
+  </ul>
+</section>
+
+<section class="page" data-route="personal/idc-insight" data-title="IDC Insight · EagleFlow">
+  <h1 class="proj-title">IDC Insight · EagleFlow<br>실측 데이터로 운영하는<br>IDC 관제·자동 복구</h1>
+  <p class="sub proj-head">개인 프로젝트 / 설계·구축·운영 전 과정<br>기간 2026.10.28 ~ 진행 중</p>
+  <p class="skills-label">Skills</p>
+  <p class="meta skills">KT Cloud · Rocky Linux · Ansible · Caddy · Python · Mosquitto(MQTT) · Telegraf · InfluxDB · PostgreSQL · Grafana · Next.js · React Flow · TypeScript · Slack · Discord</p>
+  <div class="carousel" aria-roledescription="carousel" aria-label="프로젝트 이미지">
+    <button class="car-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
+    <div class="slides">
+      <figure class="slide"><a href="assets/img/idc_cover.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_cover.jpg" alt="IDC Insight · EagleFlow 표지" width="1920" height="1080" decoding="async"></a><figcaption>IDC Insight · EagleFlow 표지</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_intent.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_intent.jpg" alt="주제 및 기획 의도" width="1920" height="1080" decoding="async"></a><figcaption>주제 및 기획 의도</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_stack.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_stack.jpg" alt="5개 계층 기술 스택" width="1920" height="1080" decoding="async"></a><figcaption>5개 계층 기술 스택</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_architecture.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_architecture.jpg" alt="전체 구조 (역할별 8대 서버)" width="1920" height="1080" decoding="async"></a><figcaption>전체 구조 (역할별 8대 서버)</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_servers.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_servers.jpg" alt="서버 역할과 접근 경계" width="1920" height="1080" decoding="async"></a><figcaption>서버 역할과 접근 경계</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_network-storage.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_network-storage.jpg" alt="네트워크와 스토리지" width="1920" height="1080" decoding="async"></a><figcaption>네트워크와 스토리지</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_auto-recovery.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_auto-recovery.jpg" alt="경보에서 복구까지" width="1920" height="1080" decoding="async"></a><figcaption>경보에서 복구까지</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_safety.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_safety.jpg" alt="자동 조치 4겹 안전장치" width="1920" height="1080" decoding="async"></a><figcaption>자동 조치 4겹 안전장치</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_eagleflow.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_eagleflow.jpg" alt="EagleFlow 워크플로 자동화 서비스" width="1920" height="1080" decoding="async"></a><figcaption>EagleFlow 워크플로 자동화 서비스</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_history.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_history.jpg" alt="운영 이력과 조치 승인" width="1920" height="1080" decoding="async"></a><figcaption>운영 이력과 조치 승인</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_auth.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_auth.jpg" alt="권한과 비밀값 설계" width="1920" height="1080" decoding="async"></a><figcaption>권한과 비밀값 설계</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_game.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_game.jpg" alt="운영 과제 · 정전 시험 운전" width="1920" height="1080" decoding="async"></a><figcaption>운영 과제 · 정전 시험 운전</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_dataset.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_dataset.jpg" alt="공개 실측 데이터셋" width="1920" height="1080" decoding="async"></a><figcaption>공개 실측 데이터셋</figcaption></figure>
+    </div>
+    <button class="car-btn next" type="button" aria-label="다음 이미지">&rsaquo;</button>
+    <p class="car-count" aria-live="polite"></p>
+  </div>
+  <p class="pdf-links">
+    <a class="pdf-btn" href="assets/files/idc_insight.pdf" target="_blank" rel="noopener">PDF 상세 보기</a>
+    <a class="pdf-btn" href="assets/files/idc_insight.pdf" download="IDC_Insight_발표자료.pdf">PDF 다운로드</a>
+    <a class="pdf-btn" href="https://github.com/Bakseongung/IDC_Insight" target="_blank" rel="noopener">GitHub 저장소</a>
+    <a class="pdf-btn" href="https://eagleflow.seongung.cloud" target="_blank" rel="noopener">서비스 바로가기</a>
+  </p>
+  <ul class="plain summary">
+    <li>NLR(구 NREL) Eagle 슈퍼컴퓨터의 공개 실측 전력 데이터를 1분 단위로 재생해, 실제 서버에서 돌아가는 IDC 관제·자동 복구 체계를 혼자 만든 프로젝트입니다.</li>
+    <li>KT Cloud VM 8대를 역할별(진입·서비스·감시·저장·수집·관리)로 나눠 Ansible로 구성하고, MQTT → InfluxDB → Grafana 경보까지 연결했습니다.</li>
+    <li>n8n 같은 워크플로 자동화 서비스 EagleFlow를 직접 만들어, 장애 주입 시험에서 사람은 승인 한 번만 하고 경보·기록·Ansible 복구·보고까지 자동으로 이어지는 것을 확인했습니다.</li>
+  </ul>
+  <h2>트러블슈팅</h2>
+  <ul class="work ts">
+    <li><strong>승인했는데 조치 실패 (종료 코드 1)</strong>
+      <span><em>원인</em>bastion의 Python 3.6에는 subprocess의 capture_output 옵션이 없음</span>
+      <span><em>해결</em>stdout·stderr를 PIPE로 받는 방식으로 바꿔 Python 3.6과 호환</span></li>
+    <li><strong>배포 후 빌드 실패</strong>
+      <span><em>원인</em>Ansible unarchive는 덮어쓰기만 해서, 레포에서 지운 소스가 서버에 그대로 남음</span>
+      <span><em>해결</em>레포 파일 목록과 비교해 남은 파일을 지우는 단계를 플레이북에 추가</span></li>
+    <li><strong>조치 노드를 붙였는데 조치 요청이 생기지 않음</strong>
+      <span><em>원인</em>노드를 다른 탭의 워크플로에 붙여서 Deploy가 되지 않음</span>
+      <span><em>해결</em>실행 로그(노드 5개)로 확인한 뒤 실제 워크플로에 다시 연결</span></li>
+    <li><strong>경보가 늦게 오는 것처럼 보임</strong>
+      <span><em>원인</em>"5분간 데이터 없음" 조건과 평가 주기가 겹쳐 실제로 약 7분 뒤에 경보 발생</span>
+      <span><em>해결</em>웹훅을 직접 쏘는 수동 시험 절차를 만들어 경보 없이도 바로 검증</span></li>
+    <li><strong>플레이북 템플릿 오류</strong>
+      <span><em>원인</em>docker ps의 중괄호({{ }})를 Ansible이 변수로 해석</span>
+      <span><em>해결</em>중괄호를 이스케이프해 원문 그대로 전달</span></li>
+  </ul>
+  <p class="meta">공통점: 추측으로 고치지 않고 실행 로그, DB 기록, 서비스 상태를 먼저 조회해 범위를 좁혔습니다.</p>
+
+  <h2>다음 단계</h2>
+  <ul class="work ts">
+    <li><strong>배포 자동화 (CI/CD)</strong>
+      <span>지금은 패치를 만들고 플레이북을 수동으로 실행함. push하면 검사·빌드·배포까지 이어지도록 바꿀 계획</span></li>
+    <li><strong>재현성 (IaC 확장)</strong>
+      <span>흩어진 플레이북을 하나로 묶고, VM과 네트워크까지 코드로 관리</span></li>
+    <li><strong>백업·복구 검증</strong>
+      <span>PostgreSQL·InfluxDB 자동 백업과 실제 복구 기록 남기기</span></li>
+    <li><strong>AI 요약 고도화</strong>
+      <span>규칙 기반 요약을 자체 호스팅 LLM 연결로 확장</span></li>
+  </ul>
+</section>
+
 <section class="page" data-route="toys" data-title="토이 프로젝트">
   <h1>토이 프로젝트</h1>
   <ul class="plain">
@@ -479,7 +565,7 @@ try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent'
 
 </main>
 </div>
-<script src="assets/js/script.js?v=10" defer></script>
+<script src="assets/js/script.js?v=12" defer></script>
 <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
   <button class="lb-close" type="button" aria-label="닫기">&times;</button>
   <button class="lb-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
