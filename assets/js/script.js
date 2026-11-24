@@ -142,10 +142,10 @@
   });
 
   /* ---------- 이미지 캐러셀 ---------- */
-  const car = $('#carousel');
-  if (car) {
+  $$('.carousel').forEach(car => {
     const slides = $$('.slide', car);
     const cnt = $('.car-count', car);
+    const page = car.closest('.page');
     let cur = 0;
     const go = n => {
       cur = (n + slides.length) % slides.length;
@@ -155,7 +155,7 @@
     $('.prev', car).addEventListener('click', () => go(cur - 1));
     $('.next', car).addEventListener('click', () => go(cur + 1));
     document.addEventListener('keydown', e => {
-      if (!pageOf['projects/ssukssuk'].classList.contains('active')) return;
+      if (!page || !page.classList.contains('active')) return;
       if (document.body.classList.contains('lb-open')) return;
       if (/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) return;
       if (e.key === 'ArrowLeft') go(cur - 1);
@@ -172,7 +172,7 @@
     });
     go(0);
     slides.forEach(s => { const im = $('img', s); if (im) { const p = new Image(); p.src = im.src; } });
-  }
+  });
 
   /* ---------- 이미지 확대 보기 ---------- */
   const lb = $('#lightbox');
@@ -200,7 +200,8 @@
     const step = d => {
       idx = (idx + d + group.length) % group.length;
       render();
-      if (car && group[0].closest('.carousel')) car.dispatchEvent(new CustomEvent('car-go', { detail: idx }));
+      const gc = group[0].closest('.carousel');
+      if (gc) gc.dispatchEvent(new CustomEvent('car-go', { detail: idx }));
     };
     document.addEventListener('click', e => {
       const im = e.target.closest('.page figure img');
