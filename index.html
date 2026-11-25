@@ -103,7 +103,7 @@ try { const t = localStorage.getItem('theme');
 
   <h2>자기소개</h2>
   <p>AI를 활용한 트래픽 분석과 리소스 모니터링으로 불필요한 운영 비용을 줄이고,<br>IaC 기반의 인프라 자동화를 구축하는 데 깊은 관심이 있습니다.</p>
-  <p>학부 연구생 시절 Docker 기반 문제 해결 사이트의 QA 및 테스터를 약 10개월간 수행하며 안정적인 서비스 운영의 중요성을 체감했습니다.<br>또한,<br>교외 연합동아리(UMC)에서의 Spring Boot 백엔드 개발과 교내 동아리(AIMOB)의 자율주행 프로젝트 경험은 애플리케이션의 동작 원리와 시스템 전반의 아키텍처를 폭넓게 이해하는 밑거름이 되었습니다.<br>이후 KT CLOUD TECH UP 클라우드 인프라 교육을 이수하면서 팀장과 부팀장을 도맡아 협업 능력과 실무 역량을 체계적으로 다졌습니다.</p>
+  <p>학부 연구생 시절 Docker 기반 문제 해결 사이트의 QA 및 테스터를 약 10개월간 수행하며 안정적인 서비스 운영의 중요성을 체감했습니다.<br>또한, 교외 연합동아리(UMC)에서의 Spring Boot 백엔드 개발과 교내 동아리(AIMOB)의 자율주행 프로젝트 경험은 애플리케이션의 동작 원리와 시스템 전반의 아키텍처를 폭넓게 이해하는 밑거름이 되었습니다.<br>이후 KT CLOUD TECH UP 클라우드 인프라 교육을 이수하면서 팀장과 부팀장을 도맡아 협업 능력과 실무 역량을 체계적으로 다졌습니다.</p>
   <p>매일 학습한 내용을 기록하며 2년간 GitHub에 연 1,000회 이상 커밋하는 꾸준함을 갖추고 있습니다.<br>Kubernetes 오픈소스 기여자로 활동하며 실제 프로덕션 환경의 문제를 해결하고 글로벌 개발자들과 협업하는 역량을 기르고 있습니다.</p>
 
   <h2>스킬</h2>
@@ -199,14 +199,14 @@ try { const t = localStorage.getItem('theme');
     <a class="pdf-btn" href="https://github.com/980-Ti/family-frame" target="_blank" rel="noopener">GitHub 저장소</a>
   </p>
   <ul class="plain summary">
-    <li>사용자 약 100만 명 규모의 성장앨범 서비스 '쑥쑥찰칵'을 벤치마킹해, 사진·영상 저장 비용 문제를 분석한 프로젝트입니다.</li>
-    <li>AWS S3 대신 Kubernetes 위의 Rook-Ceph(Erasure Coding 2+1, 저장 효율 66.7%)로 S3 호환 스토리지를 직접 구축했습니다.</li>
+    <li>사용자 약 100만 명 규모의 성장앨범 서비스 '쑥쑥찰칵'을 벤치마킹해,<br>사진·영상 저장 비용 문제를 분석한 프로젝트입니다.</li>
+    <li>AWS S3 대신 Kubernetes 위의 Rook-Ceph(Erasure Coding 2+1, 저장 효율 66.7%)로<br>S3 호환 스토리지를 직접 구축했습니다.</li>
     <li>CI/CD·GitOps, AI ChatOps, 관측성 스택을 구성하고, 사진·영상 업로드 성능과 EC 저장 효율을 직접 측정했습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
     <li><strong>이미지 업로드 실패</strong>
-      <span><em>문제</em>Backend는 Presigned PUT URL을 정상 발급했지만, 브라우저가 그 URL로 Ceph RGW에 PUT하는 단계에서 업로드 실패</span>
+      <span><em>문제</em>Backend는 Presigned PUT URL을 정상 발급했지만,<br>브라우저가 그 URL로 Ceph RGW에 PUT하는 단계에서 업로드 실패</span>
       <span><em>원인</em>URL 생성 시 ContentLength를 지정해 content-length가 서명 조건에 포함됨</span>
       <span><em>해결</em>Presigned PUT URL을 만드는 PutObjectCommand에서 ContentLength 항목 제거</span>
       <b>브라우저 업로드 시 발생하던 서명 조건 문제 해결</b></li>
@@ -216,14 +216,14 @@ try { const t = localStorage.getItem('theme');
       <span><em>해결</em>커널 모듈을 즉시 로드하고, 재부팅 후에도 자동 로드되도록 영구 설정</span>
       <b>Ceph Pod 정상 생성</b></li>
     <li><strong>PostgreSQL을 어디에 둘 것인가</strong>
-      <span><em>문제</em>Ceph 분산 블록 스토리지는 고가용성을 주지만 네트워크 복제 때문에 쓰기 지연이 생기고, 로컬 디스크는 빠르지만 노드 장애 시 DB 가용성을 잃음</span>
-      <span><em>원인</em>PostgreSQL은 쓰기 I/O 속도가 중요해 네트워크 지연에 민감하고, 로컬 배치는 노드 다운 시 서비스 전체가 멈출 위험이 있음</span>
-      <span><em>해결</em>Ceph 3-Replica 블록 풀을 PostgreSQL 전용 볼륨으로 마운트하고, 클러스터 내부 통신 전용 네트워크 대역을 분리해 복제 지연 최소화</span>
+      <span><em>문제</em>Ceph 분산 블록 스토리지는 고가용성을 주지만 네트워크 복제 때문에 쓰기 지연이 생기고,<br>로컬 디스크는 빠르지만 노드 장애 시 DB 가용성을 잃음</span>
+      <span><em>원인</em>PostgreSQL은 쓰기 I/O 속도가 중요해 네트워크 지연에 민감하고,<br>로컬 배치는 노드 다운 시 서비스 전체가 멈출 위험이 있음</span>
+      <span><em>해결</em>Ceph 3-Replica 블록 풀을 PostgreSQL 전용 볼륨으로 마운트하고,<br>클러스터 내부 통신 전용 네트워크 대역을 분리해 복제 지연 최소화</span>
       <b>노드 장애에도 데이터 유실 없이 즉시 페일오버, DB 트랜잭션 지연 최소화</b></li>
     <li><strong>Tx Unit Hang (처리량 한계 초과)</strong>
       <span><em>문제</em>csi-rbdplugin이 304번 실패하며 CrashLoopBackOff</span>
       <span><em>원인</em>VMware의 e1000 가상 랜카드(1Gbps)에서 대용량 트래픽이 발생하면 커널 로그에 Tx Unit Hang 에러 발생</span>
-      <span><em>해결</em>.vmx 파일에서 어댑터를 e1000에서 vmxnet3(10Gbps)로 변경하고, 메모리를 6GB에서 8GB로 확장</span>
+      <span><em>해결</em>.vmx 파일에서 어댑터를 e1000에서 vmxnet3(10Gbps)로 변경하고 메모리를 6GB에서 8GB로 확장</span>
       <b>csi-rbdplugin 장애 빈도 감소</b></li>
     <li><strong>Ceph 전환 시 초기 투자비는 언제 회수되는가</strong>
       <span><em>문제</em>실제 장비 단가와 운영비는 데모값이고, 실제 전기 실측값은 알 수 없음</span>
@@ -235,7 +235,7 @@ try { const t = localStorage.getItem('theme');
   <h2>아쉬운 점</h2>
   <ul class="work ts">
     <li><strong>Locust 부하 테스트 미진행</strong>
-      <span>로컬에서 Locust를 돌리자 서버가 OOM Kill 되었고, 3,000명 규모의 일시적 대용량 트래픽을 처리하기에는 서버 자원이 부족했음</span></li>
+      <span>로컬에서 Locust를 돌리자 서버가 OOM Kill 되었고,<br>3,000명 규모의 일시적 대용량 트래픽을 처리하기에는 서버 자원이 부족했음</span></li>
     <li><strong>Ceph NVMe 응답이 2분 걸리는 현상</strong>
       <span>특정 OSD(노드)에만 I/O가 몰려 락이 걸린 상태일 수 있어, 복잡한 튜닝이 필요함</span></li>
   </ul>
@@ -364,9 +364,9 @@ try { const t = localStorage.getItem('theme');
     <a class="pdf-btn" href="https://github.com/JRyu91/JHnetworks_hackathon" target="_blank" rel="noopener">GitHub 저장소</a>
   </p>
   <ul class="plain summary">
-    <li>협력사 PCB LOT 입고부터 SMT 장비 이상까지, 이미지·센서·라벨링 3종 데이터로 Risk Score를 산출해 바로 대응하는 품질 추적 SaaS입니다.</li>
+    <li>협력사 PCB LOT 입고부터 SMT 장비 이상까지,<br>이미지·센서·라벨링 3종 데이터로 Risk Score를 산출해 바로 대응하는 품질 추적 SaaS입니다.</li>
     <li>GCP 인프라를 Terraform 8개 모듈과 Ansible로 코드화하고, GKE에 4개 마이크로서비스를 키 파일 없이(Workload Identity Federation) 자동 배포했습니다.</li>
-    <li>저는 YOLO 이상탐지 분류 모델 개발·학습과 웹 업로드 프로세스 개선을 맡았고, KT Cloud TECH UP 해커톤 2026에서 대상을 받았습니다.</li>
+    <li>저는 YOLO 이상탐지 분류 모델 개발·학습과 웹 업로드 프로세스 개선을 맡았고,<br>KT Cloud TECH UP 해커톤 2026에서 대상을 받았습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
