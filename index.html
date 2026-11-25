@@ -13,7 +13,7 @@ try { const t = localStorage.getItem('theme');
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=23">
+<link rel="stylesheet" href="assets/css/style.css?v=24">
 </head>
 <body>
 <div class="theme-ctl" id="theme-ctl">
@@ -57,7 +57,8 @@ try { const t = localStorage.getItem('theme');
                 <li><div class="node"><span class="spacer"></span><a href="#/projects/dr-a2/tags" data-route="projects/dr-a2/tags"><span class="label">태그 표준</span></a></div></li>
               </ul>
             </li>
-            <li><div class="node"><span class="spacer"></span><a href="#/projects/ssukssuk" data-route="projects/ssukssuk"><span class="tags"><span class="kind team">팀</span><span class="period">26.07 ~ 26.08</span></span><span class="label">쑥쑥찰칵 성장앨범 10PB 12억 비용 절감 솔루션</span></a></div></li>
+            <li><div class="node"><span class="spacer"></span><a href="#/projects/ssukssuk" data-route="projects/ssukssuk"><span class="tags"><span class="kind team">팀</span><span class="period">26.07 ~ 26.08</span></span><span class="label">쑥쑥찰칵 성장앨범 10PB
+12억 비용 절감 솔루션</span></a></div></li>
             <li><div class="node"><span class="spacer"></span><a href="#/personal/idc-insight" data-route="personal/idc-insight"><span class="tags"><span class="kind solo">개인</span><span class="period">26.10 ~ 26.11</span></span><span class="label">EagleFlow</span></a></div></li>
           </ul>
         </li>
@@ -169,7 +170,8 @@ try { const t = localStorage.getItem('theme');
   </ul>
 </section>
 
-<section class="page" data-route="projects/ssukssuk" data-title="쑥쑥찰칵 성장앨범 10PB 12억 비용 절감 솔루션">
+<section class="page" data-route="projects/ssukssuk" data-title="쑥쑥찰칵 성장앨범 10PB
+12억 비용 절감 솔루션">
   <h1 class="proj-title">쑥쑥찰칵 성장앨범<br>스토리지 10PB 환경<br>회귀 분석 시 AWS S3 대비<br>12억 비용 절감 솔루션</h1>
   <p class="sub proj-head">Team Apple 4인 / 팀장 및 IaC/프로비저닝, AIOps<br>기간 2026.07.15 ~ 2026.08.18</p>
   <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="프로젝트 이미지">
@@ -207,7 +209,7 @@ try { const t = localStorage.getItem('theme');
     <li>AWS S3를 Kubernetes 위의 Rook-Ceph(Erasure Coding 2+1, 저장 효율 66.7%) 기반<br>S3 호환 스토리지로 대체하여 클라우드 스토리지 비용을 자체 구축 스토리지로<br>얼마나 줄일 수 있는지 검증하는 것이 목표였습니다.</li>
     <li>사진·영상 업로드 파이프라인부터 CI/CD·GitOps·모니터링·AI 장애 대응까지 갖춘 운영 환경을<br>4인 팀으로 구성하고 업로드 성능과 저장 효율을 측정했습니다.</li>
     <li>팀장 겸 IaC/프로비저닝 담당으로 kubeadm 기반 K8s 클러스터를 구축하고 GitLab CI·ArgoCD로<br>경량 DevSecOps CI/CD와 IaC 프로비저닝 구성을 담당하며,<br>Kepler 전력 모니터링·알림 연동과 AI 기반 장애 대응(ChatOps)을 구현했습니다.</li>
-    <li>3중 복제 대신 Erasure Coding 2+1로 필요한 물리 용량을 원본의 1.5배로 낮추고 앱 단 선압축으로 저장량을 약 45% 줄여,<br>10PB 규모에서 AWS S3 대비 약 12억 원의 비용 절감 효과를 추정했습니다.</li>
+    <li>3중 복제 대신 Erasure Coding 2+1로 필요한 물리 용량을 원본의 1.5배로 낮추고,<br>앱 단 선압축으로 저장량을 약 45% 줄였습니다.<br>10PB 규모에서 AWS S3 대비 약 12억 원의 비용 절감 효과를 추정했습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
@@ -235,7 +237,7 @@ try { const t = localStorage.getItem('theme');
       <span><em>문제</em>실제 장비 단가와 운영비는 데모값이고 실제 전기 실측값은 알 수 없음</span>
       <span><em>원인</em>파라미터를 많이 늘리는 것보다 꼭 필요한 데이터를 고르고 중요도를 추정하는 것이 중요</span>
       <span><em>해결</em>한국에서 실제 거래되는 값들의 평균으로 계산</span>
-      <b>스케일 NVMe 단가, 서버 CapEx, Ceph 월 전기요금, 연 운영비(직원 고용비 포함), 월 클라우드 비용을 반영한 TCO 의사결정 대시보드로 손익분기 계산 가능</b></li>
+      <b>스케일 NVMe 단가, 서버 CapEx, Ceph 월 전기요금, 연 운영비(직원 고용비 포함),<br>월 클라우드 비용을 반영한 TCO 의사결정 대시보드로 손익분기 계산 가능</b></li>
   </ul>
 
   <h2>아쉬운 점</h2>
@@ -380,7 +382,7 @@ try { const t = localStorage.getItem('theme');
     <li>협력사 PCB LOT 입고부터 SMT 장비 이상까지,<br>이미지·센서·라벨링 3종 데이터로 Risk Score를 산출해 바로 대응하는 품질 추적 SaaS입니다.</li>
     <li>GCP 인프라를 Terraform 8개 모듈과 Ansible로 코드화하고,<br>GKE에 4개 마이크로서비스를 키 파일 없이(Workload Identity Federation) 자동 배포했습니다.</li>
     <li>YOLO 이상탐지 분류 모델 개발·학습과 웹 업로드 프로세스 개선을 맡았고,<br>KT Cloud TECH UP 해커톤 2026에서 대상을 받았습니다.</li>
-    <li>GKE를 단일 Zone으로 구성해 불필요한 비용을 막고,<br>일반 서비스는 노드 3~5대 오토스케일링으로 AI 추론은 전용 노드 풀로 분리해 필요한 만큼만 자원을 쓰도록 했습니다.</li>
+    <li>GKE를 단일 Zone으로 구성해 불필요한 비용을 막고,<br>일반 서비스는 노드 3~5대 오토스케일링으로 AI 추론은 전용 노드 풀로 분리해<br>필요한 만큼만 자원을 쓰도록 했습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
@@ -522,7 +524,7 @@ try { const t = localStorage.getItem('theme');
     <li>데이터센터(IDC)에 장애가 나면 스스로 알아채고,<br>운영자가 승인 버튼 한 번만 누르면 자동으로 복구되는 관제 시스템을 혼자 만든 프로젝트입니다.</li>
     <li>가짜 예제 숫자 대신 실제 슈퍼컴퓨터(NLR Eagle)의 공개 전력 데이터를<br>1분 단위로 흘려보내 실제 서버에서 돌아가게 했고, KT Cloud VM 8대를 역할별로 나눠 Ansible로 구성했습니다.</li>
     <li>n8n 같은 워크플로 자동화 서비스 EagleFlow를 직접 만들어,<br>장애 주입 시험에서 사람은 승인 한 번만 하고 경보·기록·Ansible 복구·보고까지<br>자동으로 이어지는 것을 확인했습니다.</li>
-    <li>쿠폰 100만 원 안에서 서버 사양 맞춤(vCore −12.5%)·공인 IP 1개·필요한 만큼만 디스크 확장(−51%)·오픈소스로 운영비를 줄였고,<br>스케줄러 시뮬레이션에서 작업 몰아 담기와 유휴 노드 절전으로 시설 전력을 약 10% 줄일 수 있음을 확인했습니다.</li>
+    <li>쿠폰 100만 원 안에서 서버 사양 맞춤(vCore −12.5%)·공인 IP 1개·필요한 만큼만<br>디스크 확장(−51%)·오픈소스로 운영비를 줄였습니다.<br>스케줄러 시뮬레이션에서 작업 몰아 담기와 유휴 노드 절전으로 시설 전력을 약 10% 줄일 수 있음을 확인했습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
