@@ -234,4 +234,11 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .pdf-links.item-links { margin: 10px 0 0; }
 
 /* 사이드바 기간 태그 */
-#tree a .period { display: block; width: fit-content; margin: 2px 0 3px; padding: 0 6px; border: 1px solid var(--line); border-radius: 3px; font-size: .7rem; line-height: 1.5; color: var(--muted); font-variant-numeric: tabular-nums; }
+#tree a .tags { display: flex; gap: 4px; margin: 2px 0 3px; }
+#tree a .kind { padding: 0 6px; border-radius: 3px; font-size: .7rem; line-height: 1.5; border: 1px solid var(--line); color: var(--muted); }
+#tree a .kind.solo { color: var(--bg); background: var(--ink); border-color: var(--ink); }
+#tree a .period { display: block; width: fit-content; margin: 0; padding: 0 6px; border: 1px solid var(--line); border-radius: 3px; font-size: .7rem; line-height: 1.5; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* 프로젝트 목록 기술 태그 */
+.stack-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
+.stack-tag { padding: 0 7px; border-radius: 3px; font-size: .72rem; line-height: 1.6; color: var(--ink); background: var(--code-bg); border: 1px solid var(--line); }
