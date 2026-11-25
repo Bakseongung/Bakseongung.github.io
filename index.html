@@ -13,7 +13,7 @@ try { const t = localStorage.getItem('theme');
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=17">
+<link rel="stylesheet" href="assets/css/style.css?v=18">
 </head>
 <body>
 <div class="theme-ctl" id="theme-ctl">
@@ -155,7 +155,7 @@ try { const t = localStorage.getItem('theme');
   </ul>
   <h2>개인 프로젝트</h2>
   <ul class="plain">
-    <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">개인 프로젝트 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
+    <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">IDC 관제·자동 복구 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
   </ul>
   <h2>토이 프로젝트</h2>
   <ul class="plain">
@@ -201,7 +201,7 @@ try { const t = localStorage.getItem('theme');
   <ul class="plain summary">
     <li>사용자 약 100만 명 규모의 성장앨범 서비스 '쑥쑥찰칵'을 벤치마킹해,<br>사진·영상 저장 비용 문제를 분석한 프로젝트입니다.</li>
     <li>AWS S3 대신 Kubernetes 위의 Rook-Ceph(Erasure Coding 2+1, 저장 효율 66.7%)로<br>S3 호환 스토리지를 직접 구축했습니다.</li>
-    <li>CI/CD·GitOps, AI ChatOps, 관측성 스택을 구성하고, 사진·영상 업로드 성능과 EC 저장 효율을 직접 측정했습니다.</li>
+    <li>CI/CD·GitOps, AI ChatOps, 관측성 스택을 구성하고,<br>사진·영상 업로드 성능과 EC 저장 효율을 직접 측정했습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
@@ -222,11 +222,11 @@ try { const t = localStorage.getItem('theme');
       <b>노드 장애에도 데이터 유실 없이 즉시 페일오버, DB 트랜잭션 지연 최소화</b></li>
     <li><strong>Tx Unit Hang (처리량 한계 초과)</strong>
       <span><em>문제</em>csi-rbdplugin이 304번 실패하며 CrashLoopBackOff</span>
-      <span><em>원인</em>VMware의 e1000 가상 랜카드(1Gbps)에서 대용량 트래픽이 발생하면 커널 로그에 Tx Unit Hang 에러 발생</span>
-      <span><em>해결</em>.vmx 파일에서 어댑터를 e1000에서 vmxnet3(10Gbps)로 변경하고 메모리를 6GB에서 8GB로 확장</span>
+      <span><em>원인</em>VMware의 e1000 가상 랜카드(1Gbps)에서 대용량 트래픽이 발생하면,<br>커널 로그에 Tx Unit Hang 에러 발생</span>
+      <span><em>해결</em>.vmx 파일에서 어댑터를 e1000에서 vmxnet3(10Gbps)로 변경하고,<br>메모리를 6GB에서 8GB로 확장</span>
       <b>csi-rbdplugin 장애 빈도 감소</b></li>
     <li><strong>Ceph 전환 시 초기 투자비는 언제 회수되는가</strong>
-      <span><em>문제</em>실제 장비 단가와 운영비는 데모값이고, 실제 전기 실측값은 알 수 없음</span>
+      <span><em>문제</em>실제 장비 단가와 운영비는 데모값이고 실제 전기 실측값은 알 수 없음</span>
       <span><em>원인</em>파라미터를 많이 늘리는 것보다 꼭 필요한 데이터를 고르고 중요도를 추정하는 것이 중요</span>
       <span><em>해결</em>한국에서 실제 거래되는 값들의 평균으로 계산</span>
       <b>스케일 NVMe 단가, 서버 CapEx, Ceph 월 전기요금, 연 운영비(직원 고용비 포함), 월 클라우드 비용을 반영한 TCO 의사결정 대시보드로 손익분기 계산 가능</b></li>
@@ -365,7 +365,7 @@ try { const t = localStorage.getItem('theme');
   </p>
   <ul class="plain summary">
     <li>협력사 PCB LOT 입고부터 SMT 장비 이상까지,<br>이미지·센서·라벨링 3종 데이터로 Risk Score를 산출해 바로 대응하는 품질 추적 SaaS입니다.</li>
-    <li>GCP 인프라를 Terraform 8개 모듈과 Ansible로 코드화하고, GKE에 4개 마이크로서비스를 키 파일 없이(Workload Identity Federation) 자동 배포했습니다.</li>
+    <li>GCP 인프라를 Terraform 8개 모듈과 Ansible로 코드화하고,<br>GKE에 4개 마이크로서비스를 키 파일 없이(Workload Identity Federation) 자동 배포했습니다.</li>
     <li>저는 YOLO 이상탐지 분류 모델 개발·학습과 웹 업로드 프로세스 개선을 맡았고,<br>KT Cloud TECH UP 해커톤 2026에서 대상을 받았습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
@@ -376,15 +376,15 @@ try { const t = localStorage.getItem('theme');
       <b>키 파일 없이 GitHub Actions에서 GCP로 배포</b></li>
     <li><strong>AI 추론 응답 지연 및 메모리 부족</strong>
       <span><em>문제</em>AI 추론 요청 시 응답이 늦어지고 메모리가 부족함</span>
-      <span><em>해결</em>AI 전용 노드 풀(e2-standard-2, RAM 8GB)로 분리 배치하고 타임아웃 조정, 일반 서비스는 오토스케일링(최소 3 ~ 최대 5)으로 독립 확장</span>
+      <span><em>해결</em>AI 전용 노드 풀(e2-standard-2, RAM 8GB)로 분리 배치하고 타임아웃 조정,<br>일반 서비스는 오토스케일링(최소 3 ~ 최대 5)으로 독립 확장</span>
       <b>추론 부하가 일반 서비스에 영향을 주지 않도록 분리</b></li>
     <li><strong>Kubernetes 배포 오류</strong>
       <span><em>문제</em>여러 서비스를 한 클러스터에 배포하는 과정에서 배포 오류 발생</span>
-      <span><em>해결</em>서비스 포트를 8080으로 통일하고 서비스별 디렉터리·이미지를 분리, DB 마이그레이션은 선행 Job으로 떼어 완료 확인 후 배포</span>
+      <span><em>해결</em>서비스 포트를 8080으로 통일하고 서비스별 디렉터리·이미지를 분리,<br>DB 마이그레이션은 선행 Job으로 떼어 완료 확인 후 배포</span>
       <b>배포 후 Ingress 200 응답을 자동 검증</b></li>
     <li><strong>관리 서버와 DB의 인터넷 노출</strong>
       <span><em>문제</em>Bastion 서버와 DB가 공인 IP로 외부에 노출될 위험</span>
-      <span><em>해결</em>Bastion·DB의 공인 IP를 제거하고 관리 접속은 IAP 경유만 허용, DB 비밀번호는 코드에 저장하지 않고 배포 시점에 주입</span>
+      <span><em>해결</em>Bastion·DB의 공인 IP를 제거하고 관리 접속은 IAP 경유만 허용,<br>DB 비밀번호는 코드에 저장하지 않고 배포 시점에 주입</span>
       <b>배포 후 접근 경로가 올바른지 CI/CD에서 자동 검증</b></li>
   </ul>
 </section>
@@ -456,45 +456,46 @@ try { const t = localStorage.getItem('theme');
 <section class="page" data-route="personal" data-title="개인 프로젝트">
   <h1>개인 프로젝트</h1>
   <ul class="plain">
-    <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">개인 프로젝트 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
+    <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">IDC 관제·자동 복구 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
   </ul>
 </section>
 
 <section class="page" data-route="personal/idc-insight" data-title="EagleFlow">
   <h1 class="proj-title">EagleFlow</h1>
-  <p class="sub proj-head">개인 프로젝트 / 설계·구축·운영 전 과정<br>기간 2026.10.28 ~ 진행 중</p>
+  <p class="sub proj-head">개인 프로젝트 / 설계·구축·운영 전 과정<br>기간 2026.10.28 ~ 2026.11.25</p>
   <p class="skills-label">Skills</p>
   <p class="meta skills">KT Cloud · Rocky Linux · Ansible · Caddy · Python · Mosquitto(MQTT) · Telegraf · InfluxDB · PostgreSQL · Grafana · Next.js · React Flow · TypeScript · Slack · Discord</p>
   <div class="carousel" aria-roledescription="carousel" aria-label="프로젝트 이미지">
     <button class="car-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
     <div class="slides">
-      <figure class="slide"><a href="assets/img/idc_cover.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_cover.jpg" alt="EagleFlow 표지" width="1920" height="1080" decoding="async"></a><figcaption>EagleFlow 표지</figcaption></figure>
-      <figure class="slide"><a href="assets/img/idc_intent.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_intent.jpg" alt="주제 및 기획 의도" width="1920" height="1080" decoding="async"></a><figcaption>주제 및 기획 의도</figcaption></figure>
-      <figure class="slide"><a href="assets/img/idc_stack.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_stack.jpg" alt="5개 계층 기술 스택" width="1920" height="1080" decoding="async"></a><figcaption>5개 계층 기술 스택</figcaption></figure>
-      <figure class="slide"><a href="assets/img/idc_architecture.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_architecture.jpg" alt="전체 구조 (역할별 8대 서버)" width="1920" height="1080" decoding="async"></a><figcaption>전체 구조 (역할별 8대 서버)</figcaption></figure>
-      <figure class="slide"><a href="assets/img/idc_servers.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_servers.jpg" alt="서버 역할과 접근 경계" width="1920" height="1080" decoding="async"></a><figcaption>서버 역할과 접근 경계</figcaption></figure>
-      <figure class="slide"><a href="assets/img/idc_network-storage.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_network-storage.jpg" alt="네트워크와 스토리지" width="1920" height="1080" decoding="async"></a><figcaption>네트워크와 스토리지</figcaption></figure>
-      <figure class="slide"><a href="assets/img/idc_auto-recovery.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_auto-recovery.jpg" alt="경보에서 복구까지" width="1920" height="1080" decoding="async"></a><figcaption>경보에서 복구까지</figcaption></figure>
-      <figure class="slide"><a href="assets/img/idc_safety.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_safety.jpg" alt="자동 조치 4겹 안전장치" width="1920" height="1080" decoding="async"></a><figcaption>자동 조치 4겹 안전장치</figcaption></figure>
-      <figure class="slide"><a href="assets/img/idc_eagleflow.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_eagleflow.jpg" alt="EagleFlow 워크플로 자동화 서비스" width="1920" height="1080" decoding="async"></a><figcaption>EagleFlow 워크플로 자동화 서비스</figcaption></figure>
-      <figure class="slide"><a href="assets/img/idc_history.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_history.jpg" alt="운영 이력과 조치 승인" width="1920" height="1080" decoding="async"></a><figcaption>운영 이력과 조치 승인</figcaption></figure>
-      <figure class="slide"><a href="assets/img/idc_auth.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_auth.jpg" alt="권한과 비밀값 설계" width="1920" height="1080" decoding="async"></a><figcaption>권한과 비밀값 설계</figcaption></figure>
-      <figure class="slide"><a href="assets/img/idc_game.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_game.jpg" alt="운영 과제 · 정전 시험 운전" width="1920" height="1080" decoding="async"></a><figcaption>운영 과제 · 정전 시험 운전</figcaption></figure>
-      <figure class="slide"><a href="assets/img/idc_dataset.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_dataset.jpg" alt="공개 실측 데이터셋" width="1920" height="1080" decoding="async"></a><figcaption>공개 실측 데이터셋</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_cover.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_cover.jpg" alt="EagleFlow 표지" width="1920" height="1080" decoding="async"></a><figcaption>EagleFlow 표지</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_intent.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_intent.jpg" alt="주제 및 기획 의도" width="1920" height="1080" decoding="async"></a><figcaption>주제 및 기획 의도</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_stack.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_stack.jpg" alt="5개 계층 기술 스택" width="1920" height="1080" decoding="async"></a><figcaption>5개 계층 기술 스택</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_architecture.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_architecture.jpg" alt="전체 구조 (접속·서비스·데이터·수집·운영)" width="1920" height="1080" decoding="async"></a><figcaption>전체 구조 (접속·서비스·데이터·수집·운영)</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_network.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_network.jpg" alt="네트워크 구성" width="1920" height="1080" decoding="async"></a><figcaption>네트워크 구성</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_servers.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_servers.jpg" alt="서버 역할과 스토리지" width="1920" height="1080" decoding="async"></a><figcaption>서버 역할과 스토리지</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_pipeline.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_pipeline.jpg" alt="메트릭 수집 파이프라인" width="1920" height="1080" decoding="async"></a><figcaption>메트릭 수집 파이프라인</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_grafana.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_grafana.jpg" alt="Grafana 관제 화면" width="1920" height="1080" decoding="async"></a><figcaption>Grafana 관제 화면</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_powerflow.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_powerflow.jpg" alt="EagleFlow 전력 흐름도" width="1920" height="1080" decoding="async"></a><figcaption>EagleFlow 전력 흐름도</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_auto-recovery.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_auto-recovery.jpg" alt="경보에서 복구까지" width="1920" height="1080" decoding="async"></a><figcaption>경보에서 복구까지</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_security.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_security.jpg" alt="안전장치와 보안" width="1920" height="1080" decoding="async"></a><figcaption>안전장치와 보안</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_workflow.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_workflow.jpg" alt="워크플로와 운영 이력" width="1920" height="1080" decoding="async"></a><figcaption>워크플로와 운영 이력</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_game.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_game.jpg" alt="운영 과제 · 정전 시험 운전" width="1920" height="1080" decoding="async"></a><figcaption>운영 과제 · 정전 시험 운전</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_dataset.jpg" target="_blank" rel="noopener"><img src="assets/img/eagleflow_dataset.jpg" alt="공개 실측 데이터셋" width="1920" height="1080" decoding="async"></a><figcaption>공개 실측 데이터셋</figcaption></figure>
     </div>
     <button class="car-btn next" type="button" aria-label="다음 이미지">&rsaquo;</button>
     <p class="car-count" aria-live="polite"></p>
   </div>
   <p class="pdf-links">
-    <a class="pdf-btn" href="assets/files/idc_insight.pdf" target="_blank" rel="noopener">PDF 상세 보기</a>
-    <a class="pdf-btn" href="assets/files/idc_insight.pdf" download="IDC_Insight_발표자료.pdf">PDF 다운로드</a>
+    <a class="pdf-btn" href="assets/files/eagleflow.pdf" target="_blank" rel="noopener">PDF 상세 보기</a>
+    <a class="pdf-btn" href="assets/files/eagleflow.pdf" download="EagleFlow_발표자료.pdf">PDF 다운로드</a>
     <a class="pdf-btn" href="https://github.com/Bakseongung/IDC_Insight" target="_blank" rel="noopener">GitHub 저장소</a>
     <a class="pdf-btn" href="https://eagleflow.seongung.cloud" target="_blank" rel="noopener">서비스 바로가기</a>
   </p>
   <ul class="plain summary">
-    <li>NLR(구 NREL) Eagle 슈퍼컴퓨터의 공개 실측 전력 데이터를 1분 단위로 재생해, 실제 서버에서 돌아가는 IDC 관제·자동 복구 체계를 혼자 만든 프로젝트입니다.</li>
-    <li>KT Cloud VM 8대를 역할별(진입·서비스·감시·저장·수집·관리)로 나눠 Ansible로 구성하고, MQTT → InfluxDB → Grafana 경보까지 연결했습니다.</li>
-    <li>n8n 같은 워크플로 자동화 서비스 EagleFlow를 직접 만들어, 장애 주입 시험에서 사람은 승인 한 번만 하고 경보·기록·Ansible 복구·보고까지 자동으로 이어지는 것을 확인했습니다.</li>
+    <li>데이터센터(IDC)에 장애가 나면 스스로 알아채고,<br>운영자가 승인 버튼 한 번만 누르면 자동으로 복구되는 관제 시스템을 혼자 만든 프로젝트입니다.</li>
+    <li>가짜 예제 숫자 대신 실제 슈퍼컴퓨터(NLR Eagle)의 공개 전력 데이터를 1분 단위로 흘려보내 실제 서버에서 돌아가게 했고,<br>KT Cloud VM 8대를 역할별로 나눠 Ansible로 구성했습니다.</li>
+    <li>n8n 같은 워크플로 자동화 서비스 EagleFlow를 직접 만들어,<br>장애 주입 시험에서 사람은 승인 한 번만 하고 경보·기록·Ansible 복구·보고까지 자동으로 이어지는 것을 확인했습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
