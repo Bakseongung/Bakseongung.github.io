@@ -242,3 +242,18 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 /* 프로젝트 목록 기술 태그 */
 .stack-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
 .stack-tag { padding: 0 7px; border-radius: 3px; font-size: .72rem; line-height: 1.6; color: var(--ink); background: var(--code-bg); border: 1px solid var(--line); }
+
+/* 프로젝트 Skills 매트릭스 */
+.skillmap { margin: 6px 0 20px; border-top: 1px solid var(--line); }
+.sk-row { display: grid; grid-template-columns: 7.5rem minmax(0,1fr); gap: 12px; align-items: start; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.sk-cat { font-size: .8rem; color: var(--muted); padding-top: 3px; }
+.sk-items { display: flex; flex-wrap: wrap; gap: 6px; }
+.sk { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border-radius: 4px; font-size: .8rem; line-height: 1.6; border: 1px solid var(--line); color: var(--muted); background: transparent; }
+.sk.lv2 { color: var(--ink); background: var(--code-bg); }
+.sk.lv3 { color: var(--bg); background: var(--ink); border-color: var(--ink); font-weight: 600; }
+.sk .lv { display: inline-flex; gap: 2px; font-style: normal; }
+.sk .lv b { width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: .25; }
+.sk.lv1 .lv b:nth-child(-n+1), .sk.lv2 .lv b:nth-child(-n+2), .sk.lv3 .lv b { opacity: 1; }
+.sk-legend { display: flex; gap: 8px; justify-content: flex-end; margin: 8px 0 0; }
+.sk-legend .sk { font-size: .72rem; padding: 0 6px; }
+@media (max-width: 600px) { .sk-row { grid-template-columns: 1fr; gap: 6px; } }
