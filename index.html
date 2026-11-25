@@ -13,7 +13,7 @@ try { const t = localStorage.getItem('theme');
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=18">
+<link rel="stylesheet" href="assets/css/style.css?v=19">
 </head>
 <body>
 <div class="theme-ctl" id="theme-ctl">
@@ -48,36 +48,36 @@ try { const t = localStorage.getItem('theme');
       <ul class="tree" id="tree">
         <li><div class="node"><span class="spacer"></span><a href="#/about" data-route="about"><span class="label">이력서</span></a></div></li>
         <li class="has-children open">
-          <div class="node"><button class="toggle" type="button" aria-label="프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/projects" data-route="projects"><span class="label">프로젝트</span></a></div>
+          <div class="node"><button class="toggle" type="button" aria-label="주요 프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/projects" data-route="projects"><span class="label">주요 프로젝트</span></a></div>
           <ul>
             <li class="has-children">
-              <div class="node"><button class="toggle" type="button" aria-label="스마트팩토리 Eclipse 펼치기/접기" aria-expanded="false"></button><a href="#/projects/dr-a2" data-route="projects/dr-a2"><span class="label">스마트팩토리 Eclipse</span></a></div>
+              <div class="node"><button class="toggle" type="button" aria-label="스마트팩토리 Eclipse 펼치기/접기" aria-expanded="false"></button><a href="#/projects/dr-a2" data-route="projects/dr-a2"><span class="period">26.08 ~ 26.12</span><span class="label">스마트팩토리 Eclipse</span></a></div>
               <ul>
                 <li><div class="node"><span class="spacer"></span><a href="#/projects/dr-a2/db" data-route="projects/dr-a2/db"><span class="label">DB 설계</span></a></div></li>
                 <li><div class="node"><span class="spacer"></span><a href="#/projects/dr-a2/tags" data-route="projects/dr-a2/tags"><span class="label">태그 표준</span></a></div></li>
               </ul>
             </li>
             <li class="has-children">
-              <div class="node"><button class="toggle" type="button" aria-label="쑥쑥찰칵 성장앨범 10PB 12억 비용 절감 솔루션 펼치기/접기" aria-expanded="false"></button><a href="#/projects/ssukssuk" data-route="projects/ssukssuk"><span class="label">쑥쑥찰칵 성장앨범 10PB 12억 비용 절감 솔루션</span></a></div>
+              <div class="node"><button class="toggle" type="button" aria-label="쑥쑥찰칵 성장앨범 10PB 12억 비용 절감 솔루션 펼치기/접기" aria-expanded="false"></button><a href="#/projects/ssukssuk" data-route="projects/ssukssuk"><span class="period">26.07 ~ 26.08</span><span class="label">쑥쑥찰칵 성장앨범 10PB 12억 비용 절감 솔루션</span></a></div>
               <ul>
                 <li><div class="node"><span class="spacer"></span><a href="#/projects/ssukssuk/architecture" data-route="projects/ssukssuk/architecture"><span class="label">아키텍처</span></a></div></li>
                 <li><div class="node"><span class="spacer"></span><a href="#/projects/ssukssuk/ops" data-route="projects/ssukssuk/ops"><span class="label">DevSecOps · AI ChatOps</span></a></div></li>
                 <li><div class="node"><span class="spacer"></span><a href="#/projects/ssukssuk/results" data-route="projects/ssukssuk/results"><span class="label">검증 결과</span></a></div></li>
               </ul>
             </li>
-            <li><div class="node"><span class="spacer"></span><a href="#/projects/partnerhub" data-route="projects/partnerhub"><span class="label">Partnerhub Cloud · 해커톤 대상</span></a></div></li>
+            <li><div class="node"><span class="spacer"></span><a href="#/personal/idc-insight" data-route="personal/idc-insight"><span class="period">26.10 ~ 26.11</span><span class="label">EagleFlow</span></a></div></li>
           </ul>
         </li>
         <li class="has-children open">
-          <div class="node"><button class="toggle" type="button" aria-label="개인 프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/personal" data-route="personal"><span class="label">개인 프로젝트</span></a></div>
+          <div class="node"><button class="toggle" type="button" aria-label="대회 펼치기/접기" aria-expanded="true"></button><a href="#/personal" data-route="personal"><span class="label">대회</span></a></div>
           <ul>
-            <li><div class="node"><span class="spacer"></span><a href="#/personal/idc-insight" data-route="personal/idc-insight"><span class="label">EagleFlow</span></a></div></li>
+            <li><div class="node"><span class="spacer"></span><a href="#/projects/partnerhub" data-route="projects/partnerhub"><span class="period">26.08</span><span class="label">Partnerhub Cloud · 해커톤 대상</span></a></div></li>
           </ul>
         </li>
         <li class="has-children open">
-          <div class="node"><button class="toggle" type="button" aria-label="토이 프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/toys" data-route="toys"><span class="label">토이 프로젝트</span></a></div>
+          <div class="node"><button class="toggle" type="button" aria-label="기타 프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/toys" data-route="toys"><span class="label">기타 프로젝트</span></a></div>
           <ul>
-            <li><div class="node"><span class="spacer"></span><a href="#/toys/clover" data-route="toys/clover"><span class="label">OpenStack VM 오토스케일링 플랫폼</span></a></div></li>
+            <li><div class="node"><span class="spacer"></span><a href="#/toys/clover" data-route="toys/clover"><span class="period">26.06 ~ 26.07</span><span class="label">OpenStack VM 오토스케일링 플랫폼</span></a></div></li>
           </ul>
         </li>
       </ul>
@@ -148,28 +148,28 @@ try { const t = localStorage.getItem('theme');
       <p class="pdf-links item-links"><a class="pdf-btn" href="https://github.com/Bakseongung/ROS_Smart-Guided-Robot" target="_blank" rel="noopener">GitHub 저장소</a></p></li>
   </ul>
 
-  <h2>프로젝트</h2>
+  <h2>주요 프로젝트</h2>
   <ul class="plain">
     <li><a href="#/projects/dr-a2"><strong>스마트팩토리 Eclipse</strong></a><br><span class="meta">2026.08.24 ~ 2026.12.03 · Team Eclipse · 부팀장 · IaC/프로비저닝, DB 설계</span></li>
     <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">2026.07.15 ~ 2026.08.18 · Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>
-    <li><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · KT Cloud TECH UP 해커톤 2026 대상 · Team Eclipse · SMT AI & QA</span></li>
-  </ul>
-  <h2>개인 프로젝트</h2>
-  <ul class="plain">
     <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">2026.10.28 ~ 2026.11.25 · IDC 관제·자동 복구 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
   </ul>
-  <h2>토이 프로젝트</h2>
+  <h2>대회</h2>
+  <ul class="plain">
+    <li><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · KT Cloud TECH UP 해커톤 2026 대상 · Team Eclipse · SMT AI & QA</span></li>
+  </ul>
+  <h2>기타 프로젝트</h2>
   <ul class="plain">
     <li><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">2026.06.11 ~ 2026.07.14 · Team Clover · 팀장 겸 PM, 시스템 아키텍처 설계 · OpenStack, ZeroTier, Docker Swarm</span></li>
   </ul>
 </section>
 
-<section class="page" data-route="projects" data-title="프로젝트">
-  <h1>프로젝트</h1>
+<section class="page" data-route="projects" data-title="주요 프로젝트">
+  <h1>주요 프로젝트</h1>
   <ul class="plain">
     <li><a href="#/projects/dr-a2"><strong>스마트팩토리 Eclipse</strong></a><br><span class="meta">2026.08.24 ~ 2026.12.03 · Team Eclipse · 부팀장 · IaC/프로비저닝, DB 설계</span></li>
     <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">2026.07.15 ~ 2026.08.18 · Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>
-    <li><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · KT Cloud TECH UP 해커톤 2026 대상 · Team Eclipse · SMT AI & QA</span></li>
+    <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">2026.10.28 ~ 2026.11.25 · IDC 관제·자동 복구 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
   </ul>
 </section>
 
@@ -455,10 +455,10 @@ try { const t = localStorage.getItem('theme');
   </ul>
 </section>
 
-<section class="page" data-route="personal" data-title="개인 프로젝트">
-  <h1>개인 프로젝트</h1>
+<section class="page" data-route="personal" data-title="대회">
+  <h1>대회</h1>
   <ul class="plain">
-    <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">2026.10.28 ~ 2026.11.25 · IDC 관제·자동 복구 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
+    <li><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · KT Cloud TECH UP 해커톤 2026 대상 · Team Eclipse · SMT AI & QA</span></li>
   </ul>
 </section>
 
@@ -532,8 +532,8 @@ try { const t = localStorage.getItem('theme');
   </ul>
 </section>
 
-<section class="page" data-route="toys" data-title="토이 프로젝트">
-  <h1>토이 프로젝트</h1>
+<section class="page" data-route="toys" data-title="기타 프로젝트">
+  <h1>기타 프로젝트</h1>
   <ul class="plain">
     <li><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">2026.06.11 ~ 2026.07.14 · Team Clover · 팀장 겸 PM, 시스템 아키텍처 설계 · OpenStack, ZeroTier, Docker Swarm</span></li>
   </ul>

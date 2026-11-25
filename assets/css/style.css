@@ -228,3 +228,6 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .profile-photo { width: 132px; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border: 1px solid var(--line); border-radius: 4px; flex: none; cursor: default; }
 @media (max-width: 600px) { .resume-head { flex-direction: column; gap: 16px; } .profile-photo { width: 110px; } }
 .pdf-links.item-links { margin: 10px 0 0; }
+
+/* 사이드바 기간 태그 */
+#tree a .period { display: block; width: fit-content; margin: 2px 0 3px; padding: 0 6px; border: 1px solid var(--line); border-radius: 3px; font-size: .7rem; line-height: 1.5; color: var(--muted); font-variant-numeric: tabular-nums; }
