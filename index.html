@@ -207,6 +207,7 @@ try { const t = localStorage.getItem('theme');
     <li>AWS S3를 Kubernetes 위의 Rook-Ceph(Erasure Coding 2+1, 저장 효율 66.7%) 기반<br>S3 호환 스토리지로 대체하여 클라우드 스토리지 비용을 자체 구축 스토리지로<br>얼마나 줄일 수 있는지 검증하는 것이 목표였습니다.</li>
     <li>사진·영상 업로드 파이프라인부터 CI/CD·GitOps·모니터링·AI 장애 대응까지 갖춘 운영 환경을<br>4인 팀으로 구성하고 업로드 성능과 저장 효율을 측정했습니다.</li>
     <li>팀장 겸 IaC/프로비저닝 담당으로 kubeadm 기반 K8s 클러스터를 구축하고 GitLab CI·ArgoCD로<br>경량 DevSecOps CI/CD와 IaC 프로비저닝 구성을 담당하며,<br>Kepler 전력 모니터링·알림 연동과 AI 기반 장애 대응(ChatOps)을 구현했습니다.</li>
+    <li>3중 복제 대신 Erasure Coding 2+1로 필요한 물리 용량을 원본의 1.5배로 낮추고 앱 단 선압축으로 저장량을 약 45% 줄여,<br>10PB 규모에서 AWS S3 대비 약 12억 원의 비용 절감 효과를 추정했습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
@@ -379,6 +380,7 @@ try { const t = localStorage.getItem('theme');
     <li>협력사 PCB LOT 입고부터 SMT 장비 이상까지,<br>이미지·센서·라벨링 3종 데이터로 Risk Score를 산출해 바로 대응하는 품질 추적 SaaS입니다.</li>
     <li>GCP 인프라를 Terraform 8개 모듈과 Ansible로 코드화하고,<br>GKE에 4개 마이크로서비스를 키 파일 없이(Workload Identity Federation) 자동 배포했습니다.</li>
     <li>YOLO 이상탐지 분류 모델 개발·학습과 웹 업로드 프로세스 개선을 맡았고,<br>KT Cloud TECH UP 해커톤 2026에서 대상을 받았습니다.</li>
+    <li>GKE를 단일 Zone으로 구성해 불필요한 비용을 막고,<br>일반 서비스는 노드 3~5대 오토스케일링으로 AI 추론은 전용 노드 풀로 분리해 필요한 만큼만 자원을 쓰도록 했습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
@@ -412,6 +414,9 @@ try { const t = localStorage.getItem('theme');
     <div class="sk-row"><span class="sk-cat">데이터</span><div class="sk-items"><span class="sk lv3">PostgreSQL<i class="lv" aria-label="중요도 3/3"><b></b><b></b><b></b></i></span></div></div>
     <p class="sk-legend"><span class="sk lv3"><i class="lv"><b></b><b></b><b></b></i>핵심</span><span class="sk lv2"><i class="lv"><b></b><b></b><b></b></i>주요</span><span class="sk lv1"><i class="lv"><b></b><b></b><b></b></i>보조</span></p>
   </div>
+  <ul class="plain summary">
+    <li>Free·Enterprise 테넌트를 DB 서버를 늘리지 않고 같은 PostgreSQL 안의 스키마로 나눠 인프라 비용을 줄였고,<br>작업이 없는 시간에는 EKS 노드를 0대로 줄이는 비용 절감 계획을 세웠습니다.</li>
+  </ul>
 
   <h2>아키텍처</h2>
   <figure>
@@ -485,20 +490,22 @@ try { const t = localStorage.getItem('theme');
   <div class="carousel" aria-roledescription="carousel" aria-label="프로젝트 이미지">
     <button class="car-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
     <div class="slides">
-      <figure class="slide"><a href="assets/img/eagleflow_cover.jpg?v=2" target="_blank" rel="noopener"><img src="assets/img/eagleflow_cover.jpg?v=2" alt="EagleFlow 표지" width="1920" height="1080" decoding="async"></a><figcaption>EagleFlow 표지</figcaption></figure>
-      <figure class="slide"><a href="assets/img/eagleflow_intent.jpg?v=2" target="_blank" rel="noopener"><img src="assets/img/eagleflow_intent.jpg?v=2" alt="프로젝트 개요 · 주제 및 기획 의도" width="1920" height="1080" decoding="async"></a><figcaption>프로젝트 개요 · 주제 및 기획 의도</figcaption></figure>
-      <figure class="slide"><a href="assets/img/eagleflow_network.jpg?v=2" target="_blank" rel="noopener"><img src="assets/img/eagleflow_network.jpg?v=2" alt="네트워크 구성" width="1920" height="1080" decoding="async"></a><figcaption>네트워크 구성</figcaption></figure>
-      <figure class="slide"><a href="assets/img/eagleflow_pipeline.jpg?v=2" target="_blank" rel="noopener"><img src="assets/img/eagleflow_pipeline.jpg?v=2" alt="메트릭 수집 파이프라인" width="1920" height="1080" decoding="async"></a><figcaption>메트릭 수집 파이프라인</figcaption></figure>
-      <figure class="slide"><a href="assets/img/eagleflow_auto-recovery.jpg?v=2" target="_blank" rel="noopener"><img src="assets/img/eagleflow_auto-recovery.jpg?v=2" alt="경보에서 복구까지 (11/17 장애 주입 시험)" width="1920" height="1080" decoding="async"></a><figcaption>경보에서 복구까지 (11/17 장애 주입 시험)</figcaption></figure>
-      <figure class="slide"><a href="assets/img/eagleflow_security.jpg?v=2" target="_blank" rel="noopener"><img src="assets/img/eagleflow_security.jpg?v=2" alt="안전장치와 보안" width="1920" height="1080" decoding="async"></a><figcaption>안전장치와 보안</figcaption></figure>
-      <figure class="slide"><a href="assets/img/eagleflow_workflow.jpg?v=2" target="_blank" rel="noopener"><img src="assets/img/eagleflow_workflow.jpg?v=2" alt="워크플로와 운영 이력" width="1920" height="1080" decoding="async"></a><figcaption>워크플로와 운영 이력</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_cover.jpg?v=3" target="_blank" rel="noopener"><img src="assets/img/eagleflow_cover.jpg?v=3" alt="EagleFlow 표지" width="1920" height="1080" decoding="async"></a><figcaption>EagleFlow 표지</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_intent.jpg?v=3" target="_blank" rel="noopener"><img src="assets/img/eagleflow_intent.jpg?v=3" alt="프로젝트 개요 · 주제 및 기획 의도" width="1920" height="1080" decoding="async"></a><figcaption>프로젝트 개요 · 주제 및 기획 의도</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_network.jpg?v=3" target="_blank" rel="noopener"><img src="assets/img/eagleflow_network.jpg?v=3" alt="네트워크 구성" width="1920" height="1080" decoding="async"></a><figcaption>네트워크 구성</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_cost-cloud.jpg?v=3" target="_blank" rel="noopener"><img src="assets/img/eagleflow_cost-cloud.jpg?v=3" alt="비용 절감 · 클라우드 자원" width="1920" height="1080" decoding="async"></a><figcaption>비용 절감 · 클라우드 자원</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_pipeline.jpg?v=3" target="_blank" rel="noopener"><img src="assets/img/eagleflow_pipeline.jpg?v=3" alt="메트릭 수집 파이프라인" width="1920" height="1080" decoding="async"></a><figcaption>메트릭 수집 파이프라인</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_cost-power.jpg?v=3" target="_blank" rel="noopener"><img src="assets/img/eagleflow_cost-power.jpg?v=3" alt="비용 절감 · 전력 시뮬레이션" width="1920" height="1080" decoding="async"></a><figcaption>비용 절감 · 전력 시뮬레이션</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_auto-recovery.jpg?v=3" target="_blank" rel="noopener"><img src="assets/img/eagleflow_auto-recovery.jpg?v=3" alt="경보에서 복구까지 (11/17 장애 주입 시험)" width="1920" height="1080" decoding="async"></a><figcaption>경보에서 복구까지 (11/17 장애 주입 시험)</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_security.jpg?v=3" target="_blank" rel="noopener"><img src="assets/img/eagleflow_security.jpg?v=3" alt="안전장치와 보안" width="1920" height="1080" decoding="async"></a><figcaption>안전장치와 보안</figcaption></figure>
+      <figure class="slide"><a href="assets/img/eagleflow_workflow.jpg?v=3" target="_blank" rel="noopener"><img src="assets/img/eagleflow_workflow.jpg?v=3" alt="워크플로와 운영 이력" width="1920" height="1080" decoding="async"></a><figcaption>워크플로와 운영 이력</figcaption></figure>
     </div>
     <button class="car-btn next" type="button" aria-label="다음 이미지">&rsaquo;</button>
     <p class="car-count" aria-live="polite"></p>
   </div>
   <p class="pdf-links">
-    <a class="pdf-btn" href="assets/files/eagleflow.pdf?v=2" target="_blank" rel="noopener">PDF 상세 보기</a>
-    <a class="pdf-btn" href="assets/files/eagleflow.pdf?v=2" download="EagleFlow_발표자료.pdf">PDF 다운로드</a>
+    <a class="pdf-btn" href="assets/files/eagleflow.pdf?v=3" target="_blank" rel="noopener">PDF 상세 보기</a>
+    <a class="pdf-btn" href="assets/files/eagleflow.pdf?v=3" download="EagleFlow_발표자료.pdf">PDF 다운로드</a>
     <a class="pdf-btn" href="https://github.com/Bakseongung/IDC_Insight" target="_blank" rel="noopener">GitHub 저장소</a>
     <a class="pdf-btn" href="https://eagleflow.seongung.cloud" target="_blank" rel="noopener">서비스 바로가기</a>
   </p>
@@ -515,6 +522,7 @@ try { const t = localStorage.getItem('theme');
     <li>데이터센터(IDC)에 장애가 나면 스스로 알아채고,<br>운영자가 승인 버튼 한 번만 누르면 자동으로 복구되는 관제 시스템을 혼자 만든 프로젝트입니다.</li>
     <li>가짜 예제 숫자 대신 실제 슈퍼컴퓨터(NLR Eagle)의 공개 전력 데이터를<br>1분 단위로 흘려보내 실제 서버에서 돌아가게 했고, KT Cloud VM 8대를 역할별로 나눠 Ansible로 구성했습니다.</li>
     <li>n8n 같은 워크플로 자동화 서비스 EagleFlow를 직접 만들어,<br>장애 주입 시험에서 사람은 승인 한 번만 하고 경보·기록·Ansible 복구·보고까지<br>자동으로 이어지는 것을 확인했습니다.</li>
+    <li>쿠폰 100만 원 안에서 서버 사양 맞춤(vCore −12.5%)·공인 IP 1개·필요한 만큼만 디스크 확장(−51%)·오픈소스로 운영비를 줄였고,<br>스케줄러 시뮬레이션에서 작업 몰아 담기와 유휴 노드 절전으로 시설 전력을 약 10% 줄일 수 있음을 확인했습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
@@ -591,6 +599,7 @@ try { const t = localStorage.getItem('theme');
     <li>AWS의 Auto Scaling Group처럼 부하에 따라 VM이 자동으로 늘어나는 구조를,<br>OpenStack의 클러스터링 서비스(Senlin) 없이 Heat 오케스트레이션만으로 직접 구현한 프로젝트입니다.</li>
     <li>ZeroTier 오버레이망 위에 OpenStack·Docker Swarm·HAProxy를 구성하고,<br>Prometheus 알림부터 Ansible·Cloud-init으로 VM 생성과 Swarm 편입까지 자동화했습니다.</li>
     <li>팀장 겸 PM으로 프로젝트를 총괄하며 인프라 아키텍처를 설계하고 Flask 관리자 페이지를 개발했습니다.</li>
+    <li>부하가 있을 때만 VM을 늘리는 오토스케일링과 Cooldown으로 중복 VM 생성을 막아 자원 낭비를 줄였고,<br>별도 클러스터링 서비스 없이 Heat와 오픈소스(Prometheus·Grafana·MinIO)만으로 구성했습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
