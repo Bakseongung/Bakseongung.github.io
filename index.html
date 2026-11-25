@@ -51,6 +51,13 @@ try { const t = localStorage.getItem('theme');
           <div class="node"><button class="toggle" type="button" aria-label="프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/projects" data-route="projects"><span class="label">프로젝트</span></a></div>
           <ul>
             <li class="has-children">
+              <div class="node"><button class="toggle" type="button" aria-label="스마트팩토리 Eclipse 펼치기/접기" aria-expanded="false"></button><a href="#/projects/dr-a2" data-route="projects/dr-a2"><span class="label">스마트팩토리 Eclipse</span></a></div>
+              <ul>
+                <li><div class="node"><span class="spacer"></span><a href="#/projects/dr-a2/db" data-route="projects/dr-a2/db"><span class="label">DB 설계</span></a></div></li>
+                <li><div class="node"><span class="spacer"></span><a href="#/projects/dr-a2/tags" data-route="projects/dr-a2/tags"><span class="label">태그 표준</span></a></div></li>
+              </ul>
+            </li>
+            <li class="has-children">
               <div class="node"><button class="toggle" type="button" aria-label="쑥쑥찰칵 성장앨범 10PB 12억 비용 절감 솔루션 펼치기/접기" aria-expanded="false"></button><a href="#/projects/ssukssuk" data-route="projects/ssukssuk"><span class="label">쑥쑥찰칵 성장앨범 10PB 12억 비용 절감 솔루션</span></a></div>
               <ul>
                 <li><div class="node"><span class="spacer"></span><a href="#/projects/ssukssuk/architecture" data-route="projects/ssukssuk/architecture"><span class="label">아키텍처</span></a></div></li>
@@ -59,13 +66,6 @@ try { const t = localStorage.getItem('theme');
               </ul>
             </li>
             <li><div class="node"><span class="spacer"></span><a href="#/projects/partnerhub" data-route="projects/partnerhub"><span class="label">Partnerhub Cloud · 해커톤 대상</span></a></div></li>
-            <li class="has-children">
-              <div class="node"><button class="toggle" type="button" aria-label="멀티클라우드 기반 업종 특화 SaaS 플랫폼 펼치기/접기" aria-expanded="false"></button><a href="#/projects/dr-a2" data-route="projects/dr-a2"><span class="label">멀티클라우드 기반 업종 특화 SaaS 플랫폼</span></a></div>
-              <ul>
-                <li><div class="node"><span class="spacer"></span><a href="#/projects/dr-a2/db" data-route="projects/dr-a2/db"><span class="label">DB 설계</span></a></div></li>
-                <li><div class="node"><span class="spacer"></span><a href="#/projects/dr-a2/tags" data-route="projects/dr-a2/tags"><span class="label">태그 표준</span></a></div></li>
-              </ul>
-            </li>
           </ul>
         </li>
         <li class="has-children open">
@@ -150,26 +150,26 @@ try { const t = localStorage.getItem('theme');
 
   <h2>프로젝트</h2>
   <ul class="plain">
-    <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>
-    <li><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">KT Cloud TECH UP 해커톤 2026 대상 · Team Eclipse · SMT AI & QA</span></li>
-    <li><a href="#/projects/dr-a2"><strong>멀티클라우드 기반 업종 특화 SaaS 플랫폼</strong></a><br><span class="meta">제조에서 금융으로 · Team Eclipse · IaC/프로비저닝, DB 설계</span></li>
+    <li><a href="#/projects/dr-a2"><strong>스마트팩토리 Eclipse</strong></a><br><span class="meta">2026.08.24 ~ 2026.12.03 (진행 중) · Team Eclipse · 부팀장 · IaC/프로비저닝, DB 설계</span></li>
+    <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">2026.07.15 ~ 2026.08.18 · Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>
+    <li><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · KT Cloud TECH UP 해커톤 2026 대상 · Team Eclipse · SMT AI & QA</span></li>
   </ul>
   <h2>개인 프로젝트</h2>
   <ul class="plain">
-    <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">IDC 관제·자동 복구 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
+    <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">2026.10.28 ~ 2026.11.25 · IDC 관제·자동 복구 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
   </ul>
   <h2>토이 프로젝트</h2>
   <ul class="plain">
-    <li><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">Team Clover · PM, 시스템 아키텍처 설계 · OpenStack, ZeroTier, Docker Swarm</span></li>
+    <li><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">2026.06.11 ~ 2026.07.14 · Team Clover · 팀장 겸 PM, 시스템 아키텍처 설계 · OpenStack, ZeroTier, Docker Swarm</span></li>
   </ul>
 </section>
 
 <section class="page" data-route="projects" data-title="프로젝트">
   <h1>프로젝트</h1>
   <ul class="plain">
-    <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>
-    <li><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">KT Cloud TECH UP 해커톤 2026 대상 · Team Eclipse · SMT AI & QA</span></li>
-    <li><a href="#/projects/dr-a2"><strong>멀티클라우드 기반 업종 특화 SaaS 플랫폼</strong></a><br><span class="meta">제조에서 금융으로 · Team Eclipse · IaC/프로비저닝, DB 설계</span></li>
+    <li><a href="#/projects/dr-a2"><strong>스마트팩토리 Eclipse</strong></a><br><span class="meta">2026.08.24 ~ 2026.12.03 (진행 중) · Team Eclipse · 부팀장 · IaC/프로비저닝, DB 설계</span></li>
+    <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">2026.07.15 ~ 2026.08.18 · Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>
+    <li><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · KT Cloud TECH UP 해커톤 2026 대상 · Team Eclipse · SMT AI & QA</span></li>
   </ul>
 </section>
 
@@ -391,9 +391,9 @@ try { const t = localStorage.getItem('theme');
   </ul>
 </section>
 
-<section class="page" data-route="projects/dr-a2" data-title="멀티클라우드 기반 업종 특화 SaaS 플랫폼">
-  <h1>멀티클라우드 기반 업종 특화 SaaS 플랫폼: 제조에서 금융으로</h1>
-  <p class="sub">Team Eclipse · IaC/프로비저닝, DB 설계 담당</p>
+<section class="page" data-route="projects/dr-a2" data-title="스마트팩토리 Eclipse">
+  <h1 class="proj-title">스마트팩토리 Eclipse</h1>
+  <p class="sub proj-head">Team Eclipse 6인 / 부팀장 · IaC/프로비저닝, DB 설계<br>기간 2026.08.24 ~ 2026.12.03 (진행 중)</p>
   <p class="meta">AWS (Tokyo/Seoul) · KT Cloud · Kubernetes (EKS) · Terraform · ArgoCD · PostgreSQL</p>
 
   <h2>아키텍처</h2>
@@ -458,7 +458,7 @@ try { const t = localStorage.getItem('theme');
 <section class="page" data-route="personal" data-title="개인 프로젝트">
   <h1>개인 프로젝트</h1>
   <ul class="plain">
-    <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">IDC 관제·자동 복구 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
+    <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">2026.10.28 ~ 2026.11.25 · IDC 관제·자동 복구 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
   </ul>
 </section>
 
@@ -496,8 +496,8 @@ try { const t = localStorage.getItem('theme');
   </p>
   <ul class="plain summary">
     <li>데이터센터(IDC)에 장애가 나면 스스로 알아채고,<br>운영자가 승인 버튼 한 번만 누르면 자동으로 복구되는 관제 시스템을 혼자 만든 프로젝트입니다.</li>
-    <li>가짜 예제 숫자 대신 실제 슈퍼컴퓨터(NLR Eagle)의 공개 전력 데이터를 1분 단위로 흘려보내 실제 서버에서 돌아가게 했고,<br>KT Cloud VM 8대를 역할별로 나눠 Ansible로 구성했습니다.</li>
-    <li>n8n 같은 워크플로 자동화 서비스 EagleFlow를 직접 만들어,<br>장애 주입 시험에서 사람은 승인 한 번만 하고 경보·기록·Ansible 복구·보고까지 자동으로 이어지는 것을 확인했습니다.</li>
+    <li>가짜 예제 숫자 대신 실제 슈퍼컴퓨터(NLR Eagle)의 공개 전력 데이터를<br>1분 단위로 흘려보내 실제 서버에서 돌아가게 했고, KT Cloud VM 8대를 역할별로 나눠 Ansible로 구성했습니다.</li>
+    <li>n8n 같은 워크플로 자동화 서비스 EagleFlow를 직접 만들어,<br>장애 주입 시험에서 사람은 승인 한 번만 하고 경보·기록·Ansible 복구·보고까지<br>자동으로 이어지는 것을 확인했습니다.</li>
   </ul>
   <h2>트러블슈팅</h2>
   <ul class="work ts">
@@ -535,7 +535,7 @@ try { const t = localStorage.getItem('theme');
 <section class="page" data-route="toys" data-title="토이 프로젝트">
   <h1>토이 프로젝트</h1>
   <ul class="plain">
-    <li><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">Team Clover · PM, 시스템 아키텍처 설계 · OpenStack, ZeroTier, Docker Swarm</span></li>
+    <li><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">2026.06.11 ~ 2026.07.14 · Team Clover · 팀장 겸 PM, 시스템 아키텍처 설계 · OpenStack, ZeroTier, Docker Swarm</span></li>
   </ul>
 </section>
 
