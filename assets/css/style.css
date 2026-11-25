@@ -223,3 +223,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 
 /* 이력서 */
 .ts strong .meta { font-weight: 400; margin-left: 6px; font-size: .85rem; }
+.resume-head { display: flex; gap: 28px; align-items: flex-start; margin: 8px 0 16px; }
+.resume-head .tablewrap { flex: 1; margin: 0; }
+.profile-photo { width: 132px; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border: 1px solid var(--line); border-radius: 4px; flex: none; cursor: default; }
+@media (max-width: 600px) { .resume-head { flex-direction: column; gap: 16px; } .profile-photo { width: 110px; } }

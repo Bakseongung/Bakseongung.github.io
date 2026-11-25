@@ -13,7 +13,7 @@ try { const t = localStorage.getItem('theme');
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=15">
+<link rel="stylesheet" href="assets/css/style.css?v=16">
 </head>
 <body>
 <div class="theme-ctl" id="theme-ctl">
@@ -91,12 +91,15 @@ try { const t = localStorage.getItem('theme');
 <section class="page" data-route="about" data-title="이력서">
   <h1>박성웅</h1>
   <p class="quote">정확하게 듣는 것이 팀워크의 시작임을 현장에서 배운 박성웅입니다.</p>
-  <div class="tablewrap"><table>
+  <div class="resume-head">
+    <img class="profile-photo" src="assets/img/profile.jpg" alt="박성웅 증명사진" width="354" height="472">
+    <div class="tablewrap"><table>
     <tr><th>생년월일</th><td>2000.05.04 (만 26세)</td></tr>
     <tr><th>이메일</th><td><a href="mailto:yeopoh13@gmail.com">yeopoh13@gmail.com</a> <button class="btn" type="button" data-copy="yeopoh13@gmail.com">복사</button></td></tr>
     <tr><th>연락처</th><td><a href="tel:+821032231390">010-3223-1390</a> <button class="btn" type="button" data-copy="010-3223-1390">복사</button></td></tr>
     <tr><th>GitHub</th><td><a href="https://github.com/Bakseongung" target="_blank" rel="noopener">github.com/Bakseongung</a></td></tr>
   </table></div>
+  </div>
 
   <h2>자기소개</h2>
   <p>AI를 활용한 트래픽 분석과 리소스 모니터링으로 불필요한 운영 비용을 줄이고,<br>IaC 기반의 인프라 자동화를 구축하는 데 깊은 관심이 있습니다.</p>
