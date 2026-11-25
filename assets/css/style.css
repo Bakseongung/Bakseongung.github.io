@@ -227,3 +227,4 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .resume-head .tablewrap { flex: 1; margin: 0; }
 .profile-photo { width: 132px; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border: 1px solid var(--line); border-radius: 4px; flex: none; cursor: default; }
 @media (max-width: 600px) { .resume-head { flex-direction: column; gap: 16px; } .profile-photo { width: 110px; } }
+.pdf-links.item-links { margin: 10px 0 0; }
