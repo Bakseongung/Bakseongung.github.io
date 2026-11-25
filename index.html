@@ -13,7 +13,7 @@ try { const t = localStorage.getItem('theme');
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=14">
+<link rel="stylesheet" href="assets/css/style.css?v=15">
 </head>
 <body>
 <div class="theme-ctl" id="theme-ctl">
@@ -46,7 +46,7 @@ try { const t = localStorage.getItem('theme');
     </div>
     <nav aria-label="문서 트리">
       <ul class="tree" id="tree">
-        <li><div class="node"><span class="spacer"></span><a href="#/about" data-route="about"><span class="label">소개</span></a></div></li>
+        <li><div class="node"><span class="spacer"></span><a href="#/about" data-route="about"><span class="label">이력서</span></a></div></li>
         <li class="has-children open">
           <div class="node"><button class="toggle" type="button" aria-label="프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/projects" data-route="projects"><span class="label">프로젝트</span></a></div>
           <ul>
@@ -88,14 +88,56 @@ try { const t = localStorage.getItem('theme');
 <main class="content">
 <p class="crumb" id="crumb"></p>
 
-<section class="page" data-route="about" data-title="소개">
+<section class="page" data-route="about" data-title="이력서">
   <h1>박성웅</h1>
   <p class="quote">정확하게 듣는 것이 팀워크의 시작임을 현장에서 배운 박성웅입니다.</p>
   <div class="tablewrap"><table>
+    <tr><th>생년월일</th><td>2000.05.04 (만 26세)</td></tr>
     <tr><th>이메일</th><td><a href="mailto:yeopoh13@gmail.com">yeopoh13@gmail.com</a> <button class="btn" type="button" data-copy="yeopoh13@gmail.com">복사</button></td></tr>
     <tr><th>연락처</th><td><a href="tel:+821032231390">010-3223-1390</a> <button class="btn" type="button" data-copy="010-3223-1390">복사</button></td></tr>
     <tr><th>GitHub</th><td><a href="https://github.com/Bakseongung" target="_blank" rel="noopener">github.com/Bakseongung</a></td></tr>
   </table></div>
+
+  <h2>자기소개</h2>
+  <p>AI를 활용한 트래픽 분석과 리소스 모니터링으로 불필요한 운영 비용을 줄이고, IaC 기반의 인프라 자동화를 구축하는 데 깊은 관심이 있습니다.</p>
+  <p>학부 연구생 시절 Docker 기반 문제 해결 사이트의 QA 및 테스터를 수행했고, KT CLOUD TECH UP에서 클라우드 인프라 교육을 이수했습니다. 매일 학습한 내용을 기록하며 2년간 GitHub에 연 1,000회 이상 커밋했고, Kubernetes 오픈소스 기여자로 활동하며 협업과 문제 해결 능력을 기르고 있습니다.</p>
+
+  <h2>핵심 역량</h2>
+  <ul>
+    <li>AI 모델 개발 및 다양한 오픈소스 활용</li>
+    <li>온라인 스마트팩토리 3-Tier 구축</li>
+    <li>AWS와 KT Cloud 간 멀티 클라우드 환경 관리</li>
+    <li>A2 등급 정보시스템의 DR 구축 경험</li>
+    <li>주야간 상관없이 출근 가능</li>
+  </ul>
+
+  <h2>학력</h2>
+  <div class="tablewrap"><table>
+    <tr><th>2019.02 – 2026.02</th><td><strong>강원대학교 컴퓨터공학과</strong> (4년제) 졸업</td></tr>
+  </table></div>
+
+  <h2>자격 · 수상</h2>
+  <div class="tablewrap"><table>
+    <tr><th>2026.11</th><td><strong>AWS Certified Solutions Architect</strong><br><span class="meta">AWS (Amazon Web Services)</span></td></tr>
+    <tr><th>2026.08</th><td><strong>kt cloud TECH UP 해커톤 대상</strong><br><span class="meta">KT CLOUD TECH UP</span></td></tr>
+    <tr><th>2024.06</th><td><strong>2024 강원지역혁신플랫폼 정밀의료사업단 의료빅데이터분석 우수상</strong><br><span class="meta">정밀의료사업단</span></td></tr>
+  </table></div>
+
+  <h2>교육 · 활동</h2>
+  <ul class="work ts">
+    <li><strong>KT CLOUD TECH UP 클라우드 인프라 과정 <span class="meta">2026.05 – 2026.12</span></strong>
+      <span>클라우드 인프라 설계·구축과 운영 자동화를 배우고 팀 프로젝트 3건을 수행했습니다. 모든 프로젝트에서 팀장 또는 부팀장을 맡았습니다.</span></li>
+    <li><strong>UMC 대학 연합 IT 동아리 · Spring Boot 서버 파트 <span class="meta">2025.09 – 2025.12</span></strong>
+      <span>DB 설계, JPA·QueryDSL, REST API 설계, 로그인·회원가입 구현까지 백엔드 흐름을 단계별로 학습했습니다. <a href="https://github.com/Bakseongung/UMC-week-mission" target="_blank" rel="noopener">GitHub</a></span></li>
+    <li><strong>학부 연구생 · 온라인 저지 Code01 QA/테스터 <span class="meta">2025.03 – 2025.12</span></strong>
+      <span>Docker 기반 온라인 저지 시스템 Code01의 콘텐츠 설계와 운영 QA를 맡아 알고리즘 문제를 만들고, GitHub Issues로 결함을 추적하며 엣지 케이스와 개발 프로세스를 개선했습니다. 이 결과는 후속 연구와 논문 발간으로 이어졌습니다. <a href="https://github.com/ZeroOneDeveloper/Code01/issues/" target="_blank" rel="noopener">이슈 기록</a></span></li>
+    <li><strong>AIMOB 자율주행 동아리 <span class="meta">2025.03 – 2025.06</span></strong>
+      <span>교내 동아리를 만들어 한백전자 SerBot AGV로 장애물을 감지·회피하는 실내 안내 로봇을 개발했습니다. <a href="https://github.com/Bakseongung/ROS_Smart-Guided-Robot" target="_blank" rel="noopener">GitHub</a></span></li>
+  </ul>
+
+  <h2>스킬</h2>
+  <p class="meta skills">AWS · Terraform · Docker · Kubernetes · Linux · NGINX · Jenkins · GitLab CI · Git · GitHub · Prometheus · Grafana · PostgreSQL · MySQL · Redis · Python · Jira · Confluence</p>
+
   <h2>프로젝트</h2>
   <ul class="plain">
     <li><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">Rook-Ceph EC 2+1 · 인프라/스토리지, DevSecOps, FinOps, AI ChatOps</span></li>

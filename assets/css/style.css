@@ -220,3 +220,6 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 ::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+
+/* 이력서 */
+.ts strong .meta { font-weight: 400; margin-left: 6px; font-size: .85rem; }
