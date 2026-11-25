@@ -236,28 +236,36 @@
     const root = document.documentElement;
     const save = (k, v) => { try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch (e) {} };
     const sync = () => {
-      const mode = root.dataset.theme || 'system', acc = root.dataset.accent || 'blue';
+      const mode = root.dataset.theme || 'light';
       $$('[data-mode]', tPanel).forEach(b => b.setAttribute('aria-checked', b.dataset.mode === mode));
-      $$('[data-accent]', tPanel).forEach(b => b.setAttribute('aria-checked', b.dataset.accent === acc));
     };
     const toggle = open => { tPanel.hidden = !open; tBtn.setAttribute('aria-expanded', open); };
     tBtn.addEventListener('click', e => { e.stopPropagation(); toggle(tPanel.hidden); });
     tPanel.addEventListener('click', e => {
       e.stopPropagation();
-      const m = e.target.closest('[data-mode]'), a = e.target.closest('[data-accent]');
+      const m = e.target.closest('[data-mode]');
       if (m) {
-        if (m.dataset.mode === 'system') delete root.dataset.theme; else root.dataset.theme = m.dataset.mode;
-        save('theme', m.dataset.mode === 'system' ? null : m.dataset.mode);
-      }
-      if (a) {
-        if (a.dataset.accent === 'blue') delete root.dataset.accent; else root.dataset.accent = a.dataset.accent;
-        save('accent', a.dataset.accent === 'blue' ? null : a.dataset.accent);
+        root.dataset.theme = m.dataset.mode;
+        save('theme', m.dataset.mode === 'light' ? null : m.dataset.mode);
       }
       sync();
     });
     document.addEventListener('click', () => toggle(false));
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && !tPanel.hidden) { toggle(false); tBtn.focus(); } });
     sync();
+  }
+
+  /* ---------- 사이드바 접기 ---------- */
+  const sideBtn = $('#side-toggle'), layout = $('#layout');
+  if (sideBtn && layout) {
+    const setSide = open => {
+      layout.classList.toggle('side-closed', !open);
+      sideBtn.setAttribute('aria-expanded', String(open));
+      sideBtn.setAttribute('aria-label', open ? '사이드바 접기' : '사이드바 펼치기');
+      try { open ? localStorage.removeItem('side') : localStorage.setItem('side', 'closed'); } catch (e) {}
+    };
+    try { if (localStorage.getItem('side') === 'closed') setSide(false); } catch (e) {}
+    sideBtn.addEventListener('click', () => setSide(layout.classList.contains('side-closed')));
   }
 
   show(routeFromHash());

@@ -6,15 +6,14 @@
 <title>박성웅 | Portfolio</title>
 <meta name="description" content="클라우드 인프라 엔지니어 박성웅의 포트폴리오">
 <script>document.documentElement.classList.add('js');
-try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent');
-  if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
-  if (c) document.documentElement.dataset.accent = c; } catch (e) {}</script>
+try { const t = localStorage.getItem('theme');
+  document.documentElement.dataset.theme = (t === 'dark' || t === 'system') ? t : 'light'; } catch (e) { document.documentElement.dataset.theme = 'light'; }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=12">
+<link rel="stylesheet" href="assets/css/style.css?v=13">
 </head>
 <body>
 <div class="theme-ctl" id="theme-ctl">
@@ -28,17 +27,11 @@ try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent'
       <button type="button" role="radio" data-mode="light">라이트</button>
       <button type="button" role="radio" data-mode="dark">다크</button>
     </div>
-    <p class="tp-label">포인트 컬러</p>
-    <div class="tp-colors" role="radiogroup" aria-label="포인트 컬러">
-      <button type="button" role="radio" data-accent="blue" aria-label="파랑"></button>
-      <button type="button" role="radio" data-accent="green" aria-label="초록"></button>
-      <button type="button" role="radio" data-accent="purple" aria-label="보라"></button>
-      <button type="button" role="radio" data-accent="orange" aria-label="주황"></button>
-      <button type="button" role="radio" data-accent="gray" aria-label="회색"></button>
-    </div>
+
   </div>
 </div>
-<div class="layout">
+<div class="layout" id="layout">
+<button class="side-toggle" id="side-toggle" type="button" aria-controls="sidebar" aria-expanded="true" aria-label="사이드바 접기"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 5h18M3 12h18M3 19h18"/></svg></button>
 
 <aside class="sidebar" id="sidebar">
   <div class="brand-row">
@@ -78,7 +71,7 @@ try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent'
         <li class="has-children open">
           <div class="node"><button class="toggle" type="button" aria-label="개인 프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/personal" data-route="personal"><span class="label">개인 프로젝트</span></a></div>
           <ul>
-            <li><div class="node"><span class="spacer"></span><a href="#/personal/idc-insight" data-route="personal/idc-insight"><span class="label">IDC Insight · EagleFlow</span></a></div></li>
+            <li><div class="node"><span class="spacer"></span><a href="#/personal/idc-insight" data-route="personal/idc-insight"><span class="label">EagleFlow</span></a></div></li>
           </ul>
         </li>
         <li class="has-children open">
@@ -111,7 +104,7 @@ try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent'
   </ul>
   <h2>개인 프로젝트</h2>
   <ul class="plain">
-    <li><a href="#/personal/idc-insight"><strong>IDC Insight · EagleFlow: 실측 데이터로 운영하는 IDC 관제·자동 복구</strong></a><br><span class="meta">개인 프로젝트 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
+    <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">개인 프로젝트 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
   </ul>
   <h2>토이 프로젝트</h2>
   <ul class="plain">
@@ -412,19 +405,19 @@ try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent'
 <section class="page" data-route="personal" data-title="개인 프로젝트">
   <h1>개인 프로젝트</h1>
   <ul class="plain">
-    <li><a href="#/personal/idc-insight"><strong>IDC Insight · EagleFlow: 실측 데이터로 운영하는 IDC 관제·자동 복구</strong></a><br><span class="meta">개인 프로젝트 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
+    <li><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">개인 프로젝트 · KT Cloud VM 8대 · Ansible · Grafana · 직접 만든 워크플로 자동화 서비스</span></li>
   </ul>
 </section>
 
-<section class="page" data-route="personal/idc-insight" data-title="IDC Insight · EagleFlow">
-  <h1 class="proj-title">IDC Insight · EagleFlow<br>실측 데이터로 운영하는<br>IDC 관제·자동 복구</h1>
+<section class="page" data-route="personal/idc-insight" data-title="EagleFlow">
+  <h1 class="proj-title">EagleFlow</h1>
   <p class="sub proj-head">개인 프로젝트 / 설계·구축·운영 전 과정<br>기간 2026.10.28 ~ 진행 중</p>
   <p class="skills-label">Skills</p>
   <p class="meta skills">KT Cloud · Rocky Linux · Ansible · Caddy · Python · Mosquitto(MQTT) · Telegraf · InfluxDB · PostgreSQL · Grafana · Next.js · React Flow · TypeScript · Slack · Discord</p>
   <div class="carousel" aria-roledescription="carousel" aria-label="프로젝트 이미지">
     <button class="car-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
     <div class="slides">
-      <figure class="slide"><a href="assets/img/idc_cover.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_cover.jpg" alt="IDC Insight · EagleFlow 표지" width="1920" height="1080" decoding="async"></a><figcaption>IDC Insight · EagleFlow 표지</figcaption></figure>
+      <figure class="slide"><a href="assets/img/idc_cover.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_cover.jpg" alt="EagleFlow 표지" width="1920" height="1080" decoding="async"></a><figcaption>EagleFlow 표지</figcaption></figure>
       <figure class="slide"><a href="assets/img/idc_intent.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_intent.jpg" alt="주제 및 기획 의도" width="1920" height="1080" decoding="async"></a><figcaption>주제 및 기획 의도</figcaption></figure>
       <figure class="slide"><a href="assets/img/idc_stack.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_stack.jpg" alt="5개 계층 기술 스택" width="1920" height="1080" decoding="async"></a><figcaption>5개 계층 기술 스택</figcaption></figure>
       <figure class="slide"><a href="assets/img/idc_architecture.jpg" target="_blank" rel="noopener"><img src="assets/img/idc_architecture.jpg" alt="전체 구조 (역할별 8대 서버)" width="1920" height="1080" decoding="async"></a><figcaption>전체 구조 (역할별 8대 서버)</figcaption></figure>
@@ -565,7 +558,7 @@ try { const t = localStorage.getItem('theme'), c = localStorage.getItem('accent'
 
 </main>
 </div>
-<script src="assets/js/script.js?v=12" defer></script>
+<script src="assets/js/script.js?v=13" defer></script>
 <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
   <button class="lb-close" type="button" aria-label="닫기">&times;</button>
   <button class="lb-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>
