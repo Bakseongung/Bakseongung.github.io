@@ -298,3 +298,18 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
   .key-dock { flex-direction: row; }
   .dock-btn { width: 52px; height: 48px; font-size: .64rem; }
 }
+.dock-btn { width: 74px; }
+@media (max-width: 820px) { .dock-btn { width: 64px; } }
+
+/* 배경: 커서 주변만 은은하게 드러나는 도트 + 스포트라이트 */
+.bg-spot { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0; transition: opacity .6s; }
+.bg-spot.on { opacity: 1; }
+.bg-spot::before { content: ""; position: absolute; inset: 0;
+  background: radial-gradient(520px circle at var(--mx, 50%) var(--my, 50%), rgba(59,130,246,.07), transparent 60%); }
+.bg-spot::after { content: ""; position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(47,111,176,.35) 1px, transparent 1.4px); background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), #000, transparent 70%);
+          mask-image: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), #000, transparent 70%); }
+:root[data-theme="dark"] .bg-spot::before { background: radial-gradient(520px circle at var(--mx, 50%) var(--my, 50%), rgba(127,178,255,.08), transparent 60%); }
+:root[data-theme="dark"] .bg-spot::after { background-image: radial-gradient(rgba(127,178,255,.28) 1px, transparent 1.4px); }
+.layout { position: relative; z-index: 1; }
