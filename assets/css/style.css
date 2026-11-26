@@ -258,3 +258,4 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .sk-legend .sk { font-size: .72rem; padding: 0 6px; }
 @media (max-width: 600px) { .sk-row { grid-template-columns: 1fr; gap: 6px; } }
 #tree .label { white-space: pre-line; }
+.carousel.wide .slide img { aspect-ratio: auto; height: auto; background: #0d1117; }
