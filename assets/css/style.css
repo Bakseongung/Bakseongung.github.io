@@ -313,3 +313,20 @@ body {
 .kc-hit:focus-visible { outline: 2px solid #3B82F6; outline-offset: 4px; }
 .theme-panel { top: 54px; }
 @media (max-width: 820px) { .theme-ctl { top: 16px; right: 18px; } .brand-row { padding-right: 96px; } }
+
+/* v66: 오른쪽 중앙 키캡 독 + 도트 필드 배경 */
+.theme-ctl { position: fixed; top: 50%; right: 34px; transform: translateY(-50%); z-index: 60; }
+.key-dock { display: flex; flex-direction: column; align-items: flex-end; gap: 26px; }
+.key-dock .keycap { display: block; }
+.key-dock .kc-row { min-width: 132px; }
+.theme-panel { top: 0; right: calc(100% + 26px); left: auto; }
+body { background-image: none !important; }
+#fluid-cursor { display: none; }
+#bg-fx { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+@media (max-width: 820px) {
+  .theme-ctl { top: auto; bottom: 18px; right: 14px; transform: none; }
+  .key-dock { flex-direction: row; gap: 14px; }
+  .key-dock .kc-row { min-width: 0; padding: 8px 12px; font-size: .74rem; }
+  .theme-panel { top: auto; bottom: calc(100% + 18px); right: 0; }
+  .brand-row { padding-right: 0; }
+}

@@ -5,8 +5,7 @@
  * MIT licensed. Keep this notice in copies and adaptations.
  */
 (() => {
-  const root = document.getElementById('theme-key');
-  if (!root) return;
+  document.querySelectorAll('.keycap').forEach((root) => {
   const cfg = {
     fill: '#16121D', glow: '#3B82F6', text: '#7FB2FF', hoverText: '#FFFFFF',
     thickness: 9, float: 6, hoverFloat: 4, tilt: 49, rotate: -37, rounded: 45, intensity: 100
@@ -101,4 +100,5 @@
   hit.addEventListener('focus', () => { th = 1; go(); });
   hit.addEventListener('blur', () => { th = 0; go(); });
   paint();
+});
 })();
