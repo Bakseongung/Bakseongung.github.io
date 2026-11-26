@@ -259,3 +259,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 @media (max-width: 600px) { .sk-row { grid-template-columns: 1fr; gap: 6px; } }
 #tree .label { white-space: pre-line; }
 .carousel.wide .slide img { aspect-ratio: auto; height: auto; background: #0d1117; }
+.carousel.grass { max-width: 600px; margin: 22px 0 10px; }
+.carousel.grass .slide img { aspect-ratio: 800 / 205; width: 100%; border-radius: 6px; }
+.carousel.grass figcaption { display: none; }
+.carousel.grass .car-count { margin-top: 6px; }
