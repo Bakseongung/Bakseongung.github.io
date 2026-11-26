@@ -513,20 +513,6 @@ try { const t = localStorage.getItem('theme');
     <li>Free·Enterprise 테넌트를 DB 서버를 늘리지 않고 같은 PostgreSQL 안의 스키마로 나눠 인프라 비용을 줄였고,<br>작업이 없는 시간에는 EKS 노드를 0대로 줄이는 비용 절감 계획을 세웠습니다.</li>
   </ul>
 
-  <h2>아키텍처</h2>
-  <figure>
-    <a href="assets/img/Eclipse_architec_v1.3.jpg" target="_blank" rel="noopener"><img src="assets/img/Eclipse_architec_v1.3.jpg" alt="AWS 도쿄(Primary)와 서울(DR Standby), KT Cloud 계정 A/B로 구성된 전체 인프라 아키텍처" loading="lazy"></a>
-    <figcaption>전체 인프라 (AWS 도쿄 Primary · 서울 DR Standby · KT Cloud 계정 A/B). 클릭하면 확대됩니다.</figcaption>
-  </figure>
-  <figure>
-    <a href="assets/img/Eclipse_workflow_v1.3.jpg" target="_blank" rel="noopener"><img src="assets/img/Eclipse_workflow_v1.3.jpg" alt="평시, 테넌트 환경 제공, DR 세 가지 흐름을 나타낸 워크플로우" loading="lazy"></a>
-    <figcaption>워크플로우 (평시 · 테넌트 환경 제공 · DR)</figcaption>
-  </figure>
-  <figure>
-    <a href="assets/img/Eclipse_lifecycle_v1.3.jpg" target="_blank" rel="noopener"><img src="assets/img/Eclipse_lifecycle_v1.3.jpg" alt="개발·배포, 서비스, DR 상태 전이를 나타낸 수명주기" loading="lazy"></a>
-    <figcaption>수명주기 (개발·배포 → 서비스 → 장애 → DR → 원복)</figcaption>
-  </figure>
-
   <h2>설계 개선</h2>
   <ul class="work">
     <li><strong>DB 전환 절차</strong> KT 계정 A 쓰기 차단 후 계정 B를 Primary 역할로 전환하는 절차 확정 필요 <b>split-brain 방지가 핵심</b></li>
