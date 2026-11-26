@@ -327,3 +327,22 @@ li.has-thumb { display: grid; grid-template-columns: 176px 1fr; gap: 16px; align
 
 /* PC 화면 꽉 채우기: 본문 폭을 1440 기준 화면에 맞춤 */
 @media (min-width: 821px) { .content { max-width: 1000px; padding-right: 110px; } }
+
+/* v79 타이포그래피: Pretendard 통일 + 주석 톤 정리 */
+:root { --note: #5f5e5b; --mono: "IBM Plex Mono", ui-monospace, monospace; }
+:root[data-theme="dark"] { --note: #a8a7a3; }
+body { font-family: "Pretendard Variable", "Pretendard", -apple-system, "Malgun Gothic", system-ui, sans-serif; letter-spacing: -.011em; word-break: keep-all; overflow-wrap: anywhere; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, .hc-title { font-weight: 700; letter-spacing: -.03em; }
+h2 { font-weight: 650; }
+strong { font-weight: 650; }
+/* 회색 주석: 흐린 회색 대신 진한 톤 + 가는 굵기 */
+.sub, .meta, figcaption, .hc-desc { color: var(--note); font-weight: 450; letter-spacing: -.005em; }
+.meta, figcaption { font-size: .88rem; }
+figcaption { font-size: .84rem; }
+/* 숫자·날짜·라벨은 고정폭 */
+.home-kicker, .hc-num, .sec-num, .period, .tags .period { font-family: var(--mono); font-weight: 500; letter-spacing: .02em; }
+.home-kicker { letter-spacing: .12em; }
+.proj-head, .meta { font-variant-numeric: tabular-nums; }
+/* 담당 업무·성과 메모: 굵은 초록 줄 대신 작은 메모 라벨 */
+ul.work b { display: inline-block; margin-top: 6px; padding: 1px 8px; border-radius: 4px; font-size: .8rem; font-weight: 600; letter-spacing: -.005em; color: var(--ok); background: color-mix(in srgb, var(--ok) 10%, transparent); }
+ul.work strong { margin-bottom: 2px; }
