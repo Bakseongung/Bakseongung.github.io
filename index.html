@@ -13,7 +13,7 @@ try { const t = localStorage.getItem('theme');
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=26">
+<link rel="stylesheet" href="assets/css/style.css?v=27">
 </head>
 <body>
 <div class="theme-ctl" id="theme-ctl">
@@ -35,7 +35,7 @@ try { const t = localStorage.getItem('theme');
 
 <aside class="sidebar" id="sidebar">
   <div class="brand-row">
-    <a class="brand" href="#/about">박성웅<small>Cloud Infrastructure Engineer</small></a>
+    <a class="brand" href="#/home">박성웅<small>Cloud Infrastructure Engineer</small></a>
     <button class="btn menu-btn" id="menu-toggle" type="button" aria-controls="sidebar-body" aria-expanded="false">메뉴</button>
   </div>
   <div class="sidebar-body" id="sidebar-body">
@@ -46,6 +46,7 @@ try { const t = localStorage.getItem('theme');
     </div>
     <nav aria-label="문서 트리">
       <ul class="tree" id="tree">
+        <li><div class="node"><span class="spacer"></span><a href="#/home" data-route="home"><span class="label">홈</span></a></div></li>
         <li><div class="node"><span class="spacer"></span><a href="#/about" data-route="about"><span class="label">이력서</span></a></div></li>
         <li class="has-children open">
           <div class="node"><button class="toggle" type="button" aria-label="주요 프로젝트 펼치기/접기" aria-expanded="true"></button><a href="#/projects" data-route="projects"><span class="label">주요 프로젝트</span></a></div>
@@ -83,6 +84,59 @@ try { const t = localStorage.getItem('theme');
 
 <main class="content">
 <p class="crumb" id="crumb"></p>
+
+<section class="page" data-route="home" data-title="홈">
+  <p class="home-kicker">PORTFOLIO · 2026</p>
+  <h1 class="home-title">박성웅</h1>
+  <p class="home-sub">Cloud Infrastructure Engineer</p>
+  <p class="quote">IaC 자동화와 AI 기반 FinOps로,<br>인프라의 운영 비용을 숫자로 줄이는 박성웅입니다.</p>
+
+  <div class="home-grid">
+    <a class="home-card" href="#/about">
+      <span class="hc-num">01</span>
+      <strong class="hc-title">이력서</strong>
+      <span class="hc-desc">인적사항 · 자기소개 · 스킬 · 학력 · 자격·수상 · 교육·활동</span>
+      <span class="hc-go">바로가기 →</span>
+    </a>
+    <a class="home-card" href="#/projects">
+      <span class="hc-num">02</span>
+      <strong class="hc-title">주요 프로젝트</strong>
+      <span class="hc-desc">스마트팩토리 Eclipse · 쑥쑥찰칵 · EagleFlow</span>
+      <span class="hc-go">3개 문서 →</span>
+    </a>
+    <a class="home-card" href="#/personal">
+      <span class="hc-num">03</span>
+      <strong class="hc-title">대회</strong>
+      <span class="hc-desc">KT Cloud TECH UP 해커톤 2026 대상 · Partnerhub Cloud</span>
+      <span class="hc-go">1개 문서 →</span>
+    </a>
+    <a class="home-card" href="#/toys">
+      <span class="hc-num">04</span>
+      <strong class="hc-title">기타 프로젝트</strong>
+      <span class="hc-desc">OpenStack VM 오토스케일링 · FailoverSky</span>
+      <span class="hc-go">2개 문서 →</span>
+    </a>
+  </div>
+
+  <h2><span class="sec-num">02</span>주요 프로젝트</h2>
+  <ul class="plain">
+    <li><span class="stack-tags"><span class="stack-tag">AWS</span><span class="stack-tag">Terraform</span><span class="stack-tag">Kubernetes(EKS)</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">PostgreSQL</span></span><a href="#/projects/dr-a2"><strong>스마트팩토리 Eclipse</strong></a><br><span class="meta">2026.08.24 ~ 2026.12.03 · Team Eclipse · 부팀장 겸 IaC/프로비저닝, Full-stack, AI</span></li>
+    <li><span class="stack-tags"><span class="stack-tag">Kubernetes</span><span class="stack-tag">Rook-Ceph</span><span class="stack-tag">GitLab CI</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">Prometheus</span><span class="stack-tag">Grafana</span><span class="stack-tag">Kepler</span></span><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">2026.07.15 ~ 2026.08.18 · Team Apple · 팀장 겸 IaC/프로비저닝</span></li>
+    <li><span class="stack-tags"><span class="stack-tag">Ansible</span><span class="stack-tag">Grafana</span><span class="stack-tag">InfluxDB</span><span class="stack-tag">MQTT</span><span class="stack-tag">Next.js</span></span><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">2026.10.28 ~ 2026.11.25 · Single · 설계·구축·운영 전 과정 · IDC 관제·자동 복구</span></li>
+  
+  </ul>
+  <h2><span class="sec-num">03</span>대회</h2>
+  <ul class="plain">
+    <li><span class="stack-tags"><span class="stack-tag">GCP</span><span class="stack-tag">GKE</span><span class="stack-tag">Terraform</span><span class="stack-tag">GitHub Actions</span><span class="stack-tag">YOLOv8</span></span><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · Team Eclipse · SMT AI & QA · KT Cloud TECH UP 해커톤 2026 대상</span></li>
+  
+  </ul>
+  <h2><span class="sec-num">04</span>기타 프로젝트</h2>
+  <ul class="plain">
+    <li><span class="stack-tags"><span class="stack-tag">OpenStack</span><span class="stack-tag">Heat</span><span class="stack-tag">ZeroTier</span><span class="stack-tag">Docker Swarm</span></span><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">2026.06.11 ~ 2026.07.14 · Team Clover · 팀장 겸 PM, 시스템 아키텍처 설계</span></li>
+    <li><span class="stack-tags"><span class="stack-tag">K3s</span><span class="stack-tag">KEDA</span><span class="stack-tag">Next.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Redis</span></span><a href="#/toys/failoversky"><strong>FailoverSky · 불법 드론 대응 항공 운항 관제 시뮬레이터</strong></a><br><span class="meta">2026.08.31 ~ 2026.09.07 · 개인 · 기획·설계·개발·인프라 구축</span></li>
+  
+  </ul>
+</section>
 
 <section class="page" data-route="about" data-title="이력서">
   <h1>박성웅</h1>
@@ -722,7 +776,7 @@ try { const t = localStorage.getItem('theme');
 
 </main>
 </div>
-<script src="assets/js/script.js?v=13" defer></script>
+<script src="assets/js/script.js?v=14" defer></script>
 <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
   <button class="lb-close" type="button" aria-label="닫기">&times;</button>
   <button class="lb-btn prev" type="button" aria-label="이전 이미지">&lsaquo;</button>

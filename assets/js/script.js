@@ -2,7 +2,7 @@
   'use strict';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-  const DEFAULT = 'about';
+  const DEFAULT = 'home';
 
   const pages = $$('.page');
   const links = $$('#tree a[data-route]');
@@ -41,8 +41,8 @@
       if (href) el.href = href;
       crumb.appendChild(el);
     };
-    add('박성웅', route === 'about' ? null : '#/about');
-    if (route === 'about' || !activeLink) return;
+    add('박성웅', route === 'home' ? null : '#/home');
+    if (route === 'home' || !activeLink) return;
     const chain = [];
     for (let li = activeLink.closest('li'); li; li = parentLi(li)) {
       chain.unshift($(':scope > .node > a', li));
@@ -62,7 +62,7 @@
       for (let li = parentLi(active.closest('li')); li; li = parentLi(li)) setOpen(li, true);
     }
     renderCrumb(route, active);
-    document.title = (route === 'about' ? '박성웅' : pageOf[route].dataset.title + ' | 박성웅') + ' · Cloud Infrastructure Engineer';
+    document.title = (route === 'home' ? '박성웅' : pageOf[route].dataset.title + ' | 박성웅') + ' · Cloud Infrastructure Engineer';
     window.scrollTo(0, 0);
     document.body.classList.remove('menu-open');
     const t = $('#menu-toggle');

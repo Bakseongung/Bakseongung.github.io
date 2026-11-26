@@ -263,3 +263,19 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .carousel.grass .slide img { aspect-ratio: 800 / 205; width: 100%; border-radius: 6px; }
 .carousel.grass figcaption { display: none; }
 .carousel.grass .car-count { margin-top: 6px; }
+
+
+
+/* 시작 화면(홈) */
+.home-kicker { margin: 8px 0 6px; font-size: .78rem; letter-spacing: .14em; color: var(--muted); font-weight: 600; }
+.home-title { margin: 0; font-size: 2.4rem; }
+.home-sub { margin: 4px 0 22px; color: var(--muted); }
+.home-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 28px 0 12px; }
+.home-card { display: flex; flex-direction: column; gap: 6px; padding: 18px 18px 16px; border: 1px solid var(--line); border-radius: 8px; text-decoration: none; color: var(--ink); background: var(--bg); transition: border-color .15s, transform .15s, box-shadow .15s; }
+.home-card:hover { border-color: var(--muted); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.hc-num { font-size: .75rem; font-weight: 700; letter-spacing: .1em; color: var(--muted); font-variant-numeric: tabular-nums; }
+.hc-title { font-size: 1.15rem; }
+.hc-desc { font-size: .88rem; color: var(--muted); line-height: 1.55; }
+.hc-go { margin-top: 6px; font-size: .82rem; font-weight: 600; }
+.sec-num { display: inline-block; margin-right: 10px; font-size: .8em; color: var(--muted); font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) { .home-grid { grid-template-columns: 1fr; } .home-title { font-size: 2rem; } }
