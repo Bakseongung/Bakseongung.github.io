@@ -13,7 +13,18 @@ try { const t = localStorage.getItem('theme');
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=36">
+<link rel="stylesheet" href="assets/css/style.css?v=37">
+<script>
+/* PC에서 1440px 기준 화면을 창 너비에 맞춰 통째로 확대·축소 */
+(function () {
+  var BASE = 1440, r = document.documentElement;
+  function fit() {
+    var z = innerWidth > 820 ? innerWidth / BASE : 1;
+    r.style.zoom = z; r.style.setProperty('--z', z);
+  }
+  fit(); addEventListener('resize', fit);
+})();
+</script>
 </head>
 <body>
 <div class="theme-ctl" id="theme-ctl">
