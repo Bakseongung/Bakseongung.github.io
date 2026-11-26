@@ -10,9 +10,9 @@
   gl.getExtension('OES_texture_float_linear');
 
   const P = {
-    palette: ['#3d7dd8', '#2bb39a', '#8b6cf0', '#e0a23a'],
+    palette: ['#A855F7', '#EC4899', '#3B82F6'],
     simRes: 128, dyeRes: 512,
-    splatRadius: 0.22, splatForce: 5000, curl: 22,
+    splatRadius: 0.3, splatForce: 5000, curl: 22,
     densityDissipation: 1.6, velocityDissipation: 0.9, pressureIters: 18
   };
 
@@ -42,7 +42,7 @@ void main(){ vUv = aPos*0.5+0.5; vL = vUv-vec2(texel.x,0.); vR = vUv+vec2(texel.
     display: H + `uniform sampler2D uT; uniform float dark;
       void main(){ vec3 d = texture(uT,vUv).rgb; float a = clamp(max(d.r,max(d.g,d.b)),0.,1.);
         vec3 c = d/max(a,1e-3);
-        o = dark>0.5 ? vec4(c*a*0.9, a*0.9) : vec4(mix(vec3(1.), c, a*0.75), 1.); }`
+        o = dark>0.5 ? vec4(c*a, a) : vec4(mix(vec3(1.), c, a*0.9), 1.); }`
   };
 
   const sh = (t, s) => { const x = gl.createShader(t); gl.shaderSource(x, s); gl.compileShader(x); if (!gl.getShaderParameter(x, gl.COMPILE_STATUS)) throw gl.getShaderInfoLog(x); return x; };
@@ -97,7 +97,7 @@ void main(){ vUv = aPos*0.5+0.5; vL = vUv-vec2(texel.x,0.); vR = vUv+vec2(texel.
   const color = () => {
     hueT += 0.004;
     const x = (hueT % 1) * pal.length, i = Math.floor(x), f = x - i, a = pal[i % pal.length], b = pal[(i + 1) % pal.length];
-    return a.map((v, k) => (v + (b[k] - v) * f) * 0.16);
+    return a.map((v, k) => (v + (b[k] - v) * f) * 0.3);
   };
 
   const splat = (x, y, dx, dy, c) => {
