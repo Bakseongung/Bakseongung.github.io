@@ -13,17 +13,17 @@ try { const t = localStorage.getItem('theme');
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=30">
+<link rel="stylesheet" href="assets/css/style.css?v=31">
 </head>
 <body>
 <div class="theme-ctl" id="theme-ctl">
 <nav class="key-dock" aria-label="바로가기">
   <div class="keycap">
     <div class="kc-row kc-sizer" aria-hidden="true"><span class="kc-label"><span class="kc-icon">◐</span>테마</span></div>
-    <button class="kc-hit" id="theme-btn" type="button" aria-expanded="false" aria-controls="theme-panel" aria-label="테마 설정"></button>
+    <button class="kc-hit" id="theme-btn" type="button" aria-label="라이트/다크 전환"></button>
   </div>
   <div class="keycap">
-    <div class="kc-row kc-sizer" aria-hidden="true"><span class="kc-label"><span class="kc-icon">▣</span>주요 프로젝트</span></div>
+    <div class="kc-row kc-sizer" aria-hidden="true"><span class="kc-label"><span class="kc-icon">▣</span>프로젝트</span></div>
     <a class="kc-hit" href="#/projects" aria-label="주요 프로젝트로 이동"></a>
   </div>
   <div class="keycap">
@@ -31,15 +31,6 @@ try { const t = localStorage.getItem('theme');
     <a class="kc-hit" href="#/about" aria-label="이력서로 이동"></a>
   </div>
 </nav>
-  <div class="theme-panel" id="theme-panel" hidden>
-    <p class="tp-label">화면 모드</p>
-    <div class="tp-modes" role="radiogroup" aria-label="화면 모드">
-      <button type="button" role="radio" data-mode="system">시스템</button>
-      <button type="button" role="radio" data-mode="light">라이트</button>
-      <button type="button" role="radio" data-mode="dark">다크</button>
-    </div>
-
-  </div>
 </div>
 <div class="layout" id="layout">
 <button class="side-toggle" id="side-toggle" type="button" aria-controls="sidebar" aria-expanded="true" aria-label="사이드바 접기"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg></button>
@@ -816,8 +807,8 @@ try { const t = localStorage.getItem('theme');
 
 </main>
 </div>
-<script src="assets/js/script.js?v=14" defer></script>
-<script src="assets/js/bg-fx.js?v=1" defer></script>
+<script src="assets/js/script.js?v=15" defer></script>
+<script src="assets/js/lightning-cursor.js?v=1" defer></script>
 <script src="assets/js/keycap.js?v=2" defer></script>
 <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
   <button class="lb-close" type="button" aria-label="닫기">&times;</button>

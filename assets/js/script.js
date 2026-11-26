@@ -230,29 +230,15 @@
     });
   }
 
-  /* ---------- 테마 설정 ---------- */
-  const tBtn = $('#theme-btn'), tPanel = $('#theme-panel');
-  if (tBtn && tPanel) {
+  /* ---------- 테마 전환 (누르면 라이트 ↔ 다크) ---------- */
+  const tBtn = $('#theme-btn');
+  if (tBtn) {
     const root = document.documentElement;
-    const save = (k, v) => { try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch (e) {} };
-    const sync = () => {
-      const mode = root.dataset.theme || 'light';
-      $$('[data-mode]', tPanel).forEach(b => b.setAttribute('aria-checked', b.dataset.mode === mode));
-    };
-    const toggle = open => { tPanel.hidden = !open; tBtn.setAttribute('aria-expanded', open); };
-    tBtn.addEventListener('click', e => { e.stopPropagation(); toggle(tPanel.hidden); });
-    tPanel.addEventListener('click', e => {
-      e.stopPropagation();
-      const m = e.target.closest('[data-mode]');
-      if (m) {
-        root.dataset.theme = m.dataset.mode;
-        save('theme', m.dataset.mode === 'light' ? null : m.dataset.mode);
-      }
-      sync();
+    tBtn.addEventListener('click', () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch (e) {}
     });
-    document.addEventListener('click', () => toggle(false));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !tPanel.hidden) { toggle(false); tBtn.focus(); } });
-    sync();
   }
 
   /* ---------- 사이드바 접기 ---------- */

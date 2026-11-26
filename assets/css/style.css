@@ -330,3 +330,16 @@ body { background-image: none !important; }
   .theme-panel { top: auto; bottom: calc(100% + 18px); right: 0; }
   .brand-row { padding-right: 0; }
 }
+
+/* v67: 정사각 키캡 리스트 독 */
+.key-dock { gap: 18px; padding: 18px 14px; border-radius: 26px; background: rgba(255,255,255,.72); border: 1px solid rgba(20,30,60,.06); box-shadow: 0 6px 24px rgba(20,30,60,.06); backdrop-filter: blur(8px); align-items: center; }
+:root[data-theme="dark"] .key-dock { background: rgba(30,30,34,.6); border-color: rgba(255,255,255,.06); box-shadow: none; }
+.key-dock .kc-row { min-width: 0; width: 60px; height: 60px; padding: 0; flex-direction: column; gap: 3px; font-size: .62rem; letter-spacing: 0; }
+.key-dock .kc-label { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.key-dock .kc-icon { font-size: 1.05rem; }
+#bg-fx { display: none; }
+#lightning-cursor { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; }
+@media (max-width: 820px) {
+  .key-dock { padding: 10px 12px; gap: 12px; }
+  .key-dock .kc-row { width: 48px; height: 48px; padding: 0; font-size: .56rem; }
+}
