@@ -279,3 +279,23 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .hc-go { margin-top: 6px; font-size: .82rem; font-weight: 600; }
 .sec-num { display: inline-block; margin-right: 10px; font-size: .8em; color: var(--muted); font-variant-numeric: tabular-nums; }
 @media (max-width: 600px) { .home-grid { grid-template-columns: 1fr; } .home-title { font-size: 2rem; } }
+
+/* 유체 커서: 클릭·호버는 통과 */
+#fluid-cursor { position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 60; mix-blend-mode: multiply; }
+#fluid-cursor.dark { mix-blend-mode: screen; }
+
+/* 배경: 설계 도면 같은 옅은 모눈 */
+body {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--grid-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+    linear-gradient(var(--grid-minor) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  background-attachment: fixed;
+}
+:root { --grid-minor: rgba(47, 111, 176, .045); --grid-major: rgba(47, 111, 176, .08); }
+:root[data-theme="dark"] { --grid-minor: rgba(127, 178, 234, .045); --grid-major: rgba(127, 178, 234, .08); }
+@media (prefers-color-scheme: dark) { :root[data-theme="system"] { --grid-minor: rgba(127, 178, 234, .045); --grid-major: rgba(127, 178, 234, .08); } }
+.sidebar { background: color-mix(in srgb, var(--bg) 92%, transparent); }
