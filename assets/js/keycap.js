@@ -8,9 +8,9 @@
   document.querySelectorAll('.keycap').forEach((root) => {
   const cfg = {
     fill: '#16121D', glow: '#3B82F6', text: '#7FB2FF', hoverText: '#FFFFFF',
-    thickness: 9, float: 6, hoverFloat: 4, tilt: 49, rotate: -37, rounded: 45, intensity: 100
+    thickness: 3, float: 2, hoverFloat: 3, tilt: 0, rotate: 0, rounded: 45, intensity: 100
   };
-  const SIDE_LAYERS = 12, PRESS_FLOAT = 1.5, LEAN = -10, SHIFT_Y = 2, TEXT_GLOW = 8;
+  const SIDE_LAYERS = 12, PRESS_FLOAT = 1.5, LEAN = 0, SHIFT_Y = 2, TEXT_GLOW = 8;
 
   const hex = h => { const n = parseInt(h.slice(1), 16); return { r: n >> 16 & 255, g: n >> 8 & 255, b: n & 255 }; };
   const rgb = c => `rgb(${c.r | 0},${c.g | 0},${c.b | 0})`;
