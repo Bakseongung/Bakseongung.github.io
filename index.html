@@ -13,7 +13,7 @@ try { const t = localStorage.getItem('theme');
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=35">
+<link rel="stylesheet" href="assets/css/style.css?v=36">
 </head>
 <body>
 <div class="theme-ctl" id="theme-ctl">
@@ -86,24 +86,28 @@ try { const t = localStorage.getItem('theme');
 
   <div class="home-grid">
     <a class="home-card" href="#/about">
+      <img class="hc-thumb" src="assets/img/thumb/resume.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
       <span class="hc-num">01</span>
       <strong class="hc-title">이력서</strong>
       <span class="hc-desc">인적사항 · 자기소개 · 스킬 · 학력 · 자격·수상 · 교육·활동</span>
       <span class="hc-go">바로가기 →</span>
     </a>
     <a class="home-card" href="#/projects">
+      <img class="hc-thumb" src="assets/img/thumb/eclipse.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
       <span class="hc-num">02</span>
       <strong class="hc-title">주요 프로젝트</strong>
       <span class="hc-desc">스마트팩토리 Eclipse · 쑥쑥찰칵 · EagleFlow</span>
       <span class="hc-go">3개 문서 →</span>
     </a>
     <a class="home-card" href="#/personal">
+      <img class="hc-thumb" src="assets/img/thumb/partnerhub.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
       <span class="hc-num">03</span>
       <strong class="hc-title">대회</strong>
       <span class="hc-desc">KT Cloud TECH UP 해커톤 2026 대상 · Partnerhub Cloud</span>
       <span class="hc-go">1개 문서 →</span>
     </a>
     <a class="home-card" href="#/toys">
+      <img class="hc-thumb" src="assets/img/thumb/clover.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
       <span class="hc-num">04</span>
       <strong class="hc-title">기타 프로젝트</strong>
       <span class="hc-desc">OpenStack VM 오토스케일링 · FailoverSky</span>
@@ -113,20 +117,20 @@ try { const t = localStorage.getItem('theme');
 
   <h2><span class="sec-num">02</span>주요 프로젝트</h2>
   <ul class="plain">
-    <li><span class="stack-tags"><span class="stack-tag">AWS</span><span class="stack-tag">Terraform</span><span class="stack-tag">Kubernetes(EKS)</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">PostgreSQL</span></span><a href="#/projects/dr-a2"><strong>스마트팩토리 Eclipse</strong></a><br><span class="meta">2026.08.24 ~ 2026.12.03 · Team Eclipse · 부팀장 겸 IaC/프로비저닝, Full-stack, AI</span></li>
-    <li><span class="stack-tags"><span class="stack-tag">Kubernetes</span><span class="stack-tag">Rook-Ceph</span><span class="stack-tag">GitLab CI</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">Prometheus</span><span class="stack-tag">Grafana</span><span class="stack-tag">Kepler</span></span><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">2026.07.15 ~ 2026.08.18 · Team Apple · 팀장 겸 IaC/프로비저닝</span></li>
-    <li><span class="stack-tags"><span class="stack-tag">Ansible</span><span class="stack-tag">Grafana</span><span class="stack-tag">InfluxDB</span><span class="stack-tag">MQTT</span><span class="stack-tag">Next.js</span></span><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">2026.10.28 ~ 2026.11.25 · Single · 설계·구축·운영 전 과정 · IDC 관제·자동 복구</span></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/eclipse.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">AWS</span><span class="stack-tag">Terraform</span><span class="stack-tag">Kubernetes(EKS)</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">PostgreSQL</span></span><a href="#/projects/dr-a2"><strong>스마트팩토리 Eclipse</strong></a><br><span class="meta">2026.08.24 ~ 2026.12.03 · Team Eclipse · 부팀장 겸 IaC/프로비저닝, Full-stack, AI</span></div></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/ssukssuk.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">Kubernetes</span><span class="stack-tag">Rook-Ceph</span><span class="stack-tag">GitLab CI</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">Prometheus</span><span class="stack-tag">Grafana</span><span class="stack-tag">Kepler</span></span><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">2026.07.15 ~ 2026.08.18 · Team Apple · 팀장 겸 IaC/프로비저닝</span></div></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/eagleflow.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">Ansible</span><span class="stack-tag">Grafana</span><span class="stack-tag">InfluxDB</span><span class="stack-tag">MQTT</span><span class="stack-tag">Next.js</span></span><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">2026.10.28 ~ 2026.11.25 · Single · 설계·구축·운영 전 과정 · IDC 관제·자동 복구</span></div></li>
   
   </ul>
   <h2><span class="sec-num">03</span>대회</h2>
   <ul class="plain">
-    <li><span class="stack-tags"><span class="stack-tag">GCP</span><span class="stack-tag">GKE</span><span class="stack-tag">Terraform</span><span class="stack-tag">GitHub Actions</span><span class="stack-tag">YOLOv8</span></span><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · Team Eclipse · SMT AI & QA · KT Cloud TECH UP 해커톤 2026 대상</span></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/partnerhub.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">GCP</span><span class="stack-tag">GKE</span><span class="stack-tag">Terraform</span><span class="stack-tag">GitHub Actions</span><span class="stack-tag">YOLOv8</span></span><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · Team Eclipse · SMT AI & QA · KT Cloud TECH UP 해커톤 2026 대상</span></div></li>
   
   </ul>
   <h2><span class="sec-num">04</span>기타 프로젝트</h2>
   <ul class="plain">
-    <li><span class="stack-tags"><span class="stack-tag">OpenStack</span><span class="stack-tag">Heat</span><span class="stack-tag">ZeroTier</span><span class="stack-tag">Docker Swarm</span></span><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">2026.06.11 ~ 2026.07.14 · Team Clover · 팀장 겸 PM, 시스템 아키텍처 설계</span></li>
-    <li><span class="stack-tags"><span class="stack-tag">K3s</span><span class="stack-tag">KEDA</span><span class="stack-tag">Next.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Redis</span></span><a href="#/toys/failoversky"><strong>FailoverSky · 불법 드론 대응 항공 운항 관제 시뮬레이터</strong></a><br><span class="meta">2026.08.31 ~ 2026.09.07 · 개인 · 기획·설계·개발·인프라 구축</span></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/clover.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">OpenStack</span><span class="stack-tag">Heat</span><span class="stack-tag">ZeroTier</span><span class="stack-tag">Docker Swarm</span></span><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">2026.06.11 ~ 2026.07.14 · Team Clover · 팀장 겸 PM, 시스템 아키텍처 설계</span></div></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/failoversky.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">K3s</span><span class="stack-tag">KEDA</span><span class="stack-tag">Next.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Redis</span></span><a href="#/toys/failoversky"><strong>FailoverSky · 불법 드론 대응 항공 운항 관제 시뮬레이터</strong></a><br><span class="meta">2026.08.31 ~ 2026.09.07 · 개인 · 기획·설계·개발·인프라 구축</span></div></li>
   
   </ul>
 </section>
@@ -208,27 +212,27 @@ try { const t = localStorage.getItem('theme');
 
   <h2>주요 프로젝트</h2>
   <ul class="plain">
-    <li><span class="stack-tags"><span class="stack-tag">AWS</span><span class="stack-tag">Terraform</span><span class="stack-tag">Kubernetes(EKS)</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">PostgreSQL</span></span><a href="#/projects/dr-a2"><strong>스마트팩토리 Eclipse</strong></a><br><span class="meta">2026.08.24 ~ 2026.12.03 · Team Eclipse · 부팀장 겸 IaC/프로비저닝, Full-stack, AI</span></li>
-    <li><span class="stack-tags"><span class="stack-tag">Kubernetes</span><span class="stack-tag">Rook-Ceph</span><span class="stack-tag">GitLab CI</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">Prometheus</span><span class="stack-tag">Grafana</span><span class="stack-tag">Kepler</span></span><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">2026.07.15 ~ 2026.08.18 · Team Apple · 팀장 겸 IaC/프로비저닝</span></li>
-    <li><span class="stack-tags"><span class="stack-tag">Ansible</span><span class="stack-tag">Grafana</span><span class="stack-tag">InfluxDB</span><span class="stack-tag">MQTT</span><span class="stack-tag">Next.js</span></span><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">2026.10.28 ~ 2026.11.25 · Single · 설계·구축·운영 전 과정 · IDC 관제·자동 복구</span></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/eclipse.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">AWS</span><span class="stack-tag">Terraform</span><span class="stack-tag">Kubernetes(EKS)</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">PostgreSQL</span></span><a href="#/projects/dr-a2"><strong>스마트팩토리 Eclipse</strong></a><br><span class="meta">2026.08.24 ~ 2026.12.03 · Team Eclipse · 부팀장 겸 IaC/프로비저닝, Full-stack, AI</span></div></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/ssukssuk.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">Kubernetes</span><span class="stack-tag">Rook-Ceph</span><span class="stack-tag">GitLab CI</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">Prometheus</span><span class="stack-tag">Grafana</span><span class="stack-tag">Kepler</span></span><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">2026.07.15 ~ 2026.08.18 · Team Apple · 팀장 겸 IaC/프로비저닝</span></div></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/eagleflow.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">Ansible</span><span class="stack-tag">Grafana</span><span class="stack-tag">InfluxDB</span><span class="stack-tag">MQTT</span><span class="stack-tag">Next.js</span></span><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">2026.10.28 ~ 2026.11.25 · Single · 설계·구축·운영 전 과정 · IDC 관제·자동 복구</span></div></li>
   </ul>
   <h2>대회</h2>
   <ul class="plain">
-    <li><span class="stack-tags"><span class="stack-tag">GCP</span><span class="stack-tag">GKE</span><span class="stack-tag">Terraform</span><span class="stack-tag">GitHub Actions</span><span class="stack-tag">YOLOv8</span></span><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · Team Eclipse · SMT AI & QA · KT Cloud TECH UP 해커톤 2026 대상</span></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/partnerhub.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">GCP</span><span class="stack-tag">GKE</span><span class="stack-tag">Terraform</span><span class="stack-tag">GitHub Actions</span><span class="stack-tag">YOLOv8</span></span><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · Team Eclipse · SMT AI & QA · KT Cloud TECH UP 해커톤 2026 대상</span></div></li>
   </ul>
   <h2>기타 프로젝트</h2>
   <ul class="plain">
-    <li><span class="stack-tags"><span class="stack-tag">OpenStack</span><span class="stack-tag">Heat</span><span class="stack-tag">ZeroTier</span><span class="stack-tag">Docker Swarm</span></span><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">2026.06.11 ~ 2026.07.14 · Team Clover · 팀장 겸 PM, 시스템 아키텍처 설계</span></li>
-    <li><span class="stack-tags"><span class="stack-tag">K3s</span><span class="stack-tag">KEDA</span><span class="stack-tag">Next.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Redis</span></span><a href="#/toys/failoversky"><strong>FailoverSky · 불법 드론 대응 항공 운항 관제 시뮬레이터</strong></a><br><span class="meta">2026.08.31 ~ 2026.09.07 · 개인 · 기획·설계·개발·인프라 구축</span></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/clover.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">OpenStack</span><span class="stack-tag">Heat</span><span class="stack-tag">ZeroTier</span><span class="stack-tag">Docker Swarm</span></span><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">2026.06.11 ~ 2026.07.14 · Team Clover · 팀장 겸 PM, 시스템 아키텍처 설계</span></div></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/failoversky.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">K3s</span><span class="stack-tag">KEDA</span><span class="stack-tag">Next.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Redis</span></span><a href="#/toys/failoversky"><strong>FailoverSky · 불법 드론 대응 항공 운항 관제 시뮬레이터</strong></a><br><span class="meta">2026.08.31 ~ 2026.09.07 · 개인 · 기획·설계·개발·인프라 구축</span></div></li>
   </ul>
 </section>
 
 <section class="page" data-route="projects" data-title="주요 프로젝트">
   <h1>주요 프로젝트</h1>
   <ul class="plain">
-    <li><span class="stack-tags"><span class="stack-tag">AWS</span><span class="stack-tag">Terraform</span><span class="stack-tag">Kubernetes(EKS)</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">PostgreSQL</span></span><a href="#/projects/dr-a2"><strong>스마트팩토리 Eclipse</strong></a><br><span class="meta">2026.08.24 ~ 2026.12.03 · Team Eclipse · 부팀장 겸 IaC/프로비저닝, Full-stack, AI</span></li>
-    <li><span class="stack-tags"><span class="stack-tag">Kubernetes</span><span class="stack-tag">Rook-Ceph</span><span class="stack-tag">GitLab CI</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">Prometheus</span><span class="stack-tag">Grafana</span><span class="stack-tag">Kepler</span></span><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">2026.07.15 ~ 2026.08.18 · Team Apple · 팀장 겸 IaC/프로비저닝</span></li>
-    <li><span class="stack-tags"><span class="stack-tag">Ansible</span><span class="stack-tag">Grafana</span><span class="stack-tag">InfluxDB</span><span class="stack-tag">MQTT</span><span class="stack-tag">Next.js</span></span><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">2026.10.28 ~ 2026.11.25 · Single · 설계·구축·운영 전 과정 · IDC 관제·자동 복구</span></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/eclipse.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">AWS</span><span class="stack-tag">Terraform</span><span class="stack-tag">Kubernetes(EKS)</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">PostgreSQL</span></span><a href="#/projects/dr-a2"><strong>스마트팩토리 Eclipse</strong></a><br><span class="meta">2026.08.24 ~ 2026.12.03 · Team Eclipse · 부팀장 겸 IaC/프로비저닝, Full-stack, AI</span></div></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/ssukssuk.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">Kubernetes</span><span class="stack-tag">Rook-Ceph</span><span class="stack-tag">GitLab CI</span><span class="stack-tag">ArgoCD</span><span class="stack-tag">Prometheus</span><span class="stack-tag">Grafana</span><span class="stack-tag">Kepler</span></span><a href="#/projects/ssukssuk"><strong>쑥쑥찰칵 성장앨범 스토리지 10PB 환경 회귀 분석 시 AWS S3 대비 12억 비용 절감 솔루션</strong></a><br><span class="meta">2026.07.15 ~ 2026.08.18 · Team Apple · 팀장 겸 IaC/프로비저닝</span></div></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/eagleflow.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">Ansible</span><span class="stack-tag">Grafana</span><span class="stack-tag">InfluxDB</span><span class="stack-tag">MQTT</span><span class="stack-tag">Next.js</span></span><a href="#/personal/idc-insight"><strong>EagleFlow</strong></a><br><span class="meta">2026.10.28 ~ 2026.11.25 · Single · 설계·구축·운영 전 과정 · IDC 관제·자동 복구</span></div></li>
   </ul>
 </section>
 
@@ -571,7 +575,7 @@ try { const t = localStorage.getItem('theme');
 <section class="page" data-route="personal" data-title="대회">
   <h1>대회</h1>
   <ul class="plain">
-    <li><span class="stack-tags"><span class="stack-tag">GCP</span><span class="stack-tag">GKE</span><span class="stack-tag">Terraform</span><span class="stack-tag">GitHub Actions</span><span class="stack-tag">YOLOv8</span></span><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · Team Eclipse · SMT AI & QA · KT Cloud TECH UP 해커톤 2026 대상</span></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/partnerhub.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">GCP</span><span class="stack-tag">GKE</span><span class="stack-tag">Terraform</span><span class="stack-tag">GitHub Actions</span><span class="stack-tag">YOLOv8</span></span><a href="#/projects/partnerhub"><strong>Partnerhub Cloud: AI 기반 SMT 공정 품질 관리 플랫폼</strong></a><br><span class="meta">2026.08.19 ~ 2026.08.21 · Team Eclipse · SMT AI & QA · KT Cloud TECH UP 해커톤 2026 대상</span></div></li>
   </ul>
 </section>
 
@@ -651,8 +655,8 @@ try { const t = localStorage.getItem('theme');
 <section class="page" data-route="toys" data-title="기타 프로젝트">
   <h1>기타 프로젝트</h1>
   <ul class="plain">
-    <li><span class="stack-tags"><span class="stack-tag">OpenStack</span><span class="stack-tag">Heat</span><span class="stack-tag">ZeroTier</span><span class="stack-tag">Docker Swarm</span></span><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">2026.06.11 ~ 2026.07.14 · Team Clover · 팀장 겸 PM, 시스템 아키텍처 설계</span></li>
-    <li><span class="stack-tags"><span class="stack-tag">K3s</span><span class="stack-tag">KEDA</span><span class="stack-tag">Next.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Redis</span></span><a href="#/toys/failoversky"><strong>FailoverSky · 불법 드론 대응 항공 운항 관제 시뮬레이터</strong></a><br><span class="meta">2026.08.31 ~ 2026.09.07 · 개인 · 기획·설계·개발·인프라 구축</span></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/clover.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">OpenStack</span><span class="stack-tag">Heat</span><span class="stack-tag">ZeroTier</span><span class="stack-tag">Docker Swarm</span></span><a href="#/toys/clover"><strong>OpenStack 기반 VM 오토스케일링 운영 자동화 클라우드 플랫폼 구축</strong></a><br><span class="meta">2026.06.11 ~ 2026.07.14 · Team Clover · 팀장 겸 PM, 시스템 아키텍처 설계</span></div></li>
+    <li class="has-thumb"><img class="li-thumb" src="assets/img/thumb/failoversky.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="li-body"><span class="stack-tags"><span class="stack-tag">K3s</span><span class="stack-tag">KEDA</span><span class="stack-tag">Next.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Redis</span></span><a href="#/toys/failoversky"><strong>FailoverSky · 불법 드론 대응 항공 운항 관제 시뮬레이터</strong></a><br><span class="meta">2026.08.31 ~ 2026.09.07 · 개인 · 기획·설계·개발·인프라 구축</span></div></li>
   </ul>
 </section>
 

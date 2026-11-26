@@ -316,3 +316,11 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .dock-btn { width: 58px; position: relative; }
 .dock-tag { position: absolute; top: 1px; left: 1px; padding: 0 3px; border-radius: 3px; background: var(--accent); color: #fff; font-style: normal; font-size: .5rem; font-weight: 700; line-height: 1.5; }
 @media (max-width: 820px) { .dock-btn { width: 52px; } }
+
+/* 썸네일 */
+.hc-thumb { display: block; width: calc(100% + 36px); margin: -18px -18px 10px; aspect-ratio: 16 / 9; object-fit: cover; border-bottom: 1px solid var(--line); border-radius: 8px 8px 0 0; background: var(--code-bg); }
+.home-card { overflow: hidden; }
+li.has-thumb { display: grid; grid-template-columns: 176px 1fr; gap: 16px; align-items: start; }
+.li-thumb { width: 176px; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid var(--line); border-radius: 6px; background: var(--code-bg); }
+@media (max-width: 600px) { li.has-thumb { grid-template-columns: 1fr; gap: 8px; } .li-thumb { width: 100%; } }
+.hc-thumb, .li-thumb { height: auto; }
