@@ -346,3 +346,13 @@ figcaption { font-size: .84rem; }
 /* 담당 업무·성과 메모: 굵은 초록 줄 대신 작은 메모 라벨 */
 ul.work b { display: inline-block; margin-top: 6px; padding: 1px 8px; border-radius: 4px; font-size: .8rem; font-weight: 600; letter-spacing: -.005em; color: var(--ok); background: color-mix(in srgb, var(--ok) 10%, transparent); }
 ul.work strong { margin-bottom: 2px; }
+
+/* v80 모바일 메뉴 버튼 + 썸네일 링크 */
+@media (max-width: 820px) {
+  .brand-row { padding-right: 0 !important; padding-left: 8px; }
+  .menu-btn { display: inline-flex !important; align-items: center; gap: 6px; height: 44px; padding: 0 14px; margin: 0 -4px 0 0; font-size: .95rem; font-weight: 600; border-radius: 10px; }
+}
+.li-thumb-link { display: block; line-height: 0; border-radius: 6px; }
+.li-thumb-link:hover .li-thumb { border-color: var(--accent); }
+.li-thumb { transition: border-color .15s, transform .15s; }
+.li-thumb-link:hover .li-thumb { transform: translateY(-2px); }
