@@ -313,3 +313,6 @@ html { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 :root[data-theme="dark"] .bg-spot::before { background: radial-gradient(520px circle at var(--mx, 50%) var(--my, 50%), rgba(127,178,255,.08), transparent 60%); }
 :root[data-theme="dark"] .bg-spot::after { background-image: radial-gradient(rgba(127,178,255,.28) 1px, transparent 1.4px); }
 .layout { position: relative; z-index: 1; }
+.dock-btn { width: 58px; position: relative; }
+.dock-tag { position: absolute; top: 1px; left: 1px; padding: 0 3px; border-radius: 3px; background: var(--accent); color: #fff; font-style: normal; font-size: .5rem; font-weight: 700; line-height: 1.5; }
+@media (max-width: 820px) { .dock-btn { width: 52px; } }
